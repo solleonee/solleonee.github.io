@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson5</title>
+    <link rel="stylesheet" href="lesson5.css">
+</head>
+<body>
+<h1>Позиционирование.</h1>
+<nav>План занятия:
+    <ul>
+        <li>
+            <strong>position</strong>
+            <ul>
+                <li>static
+                    <p>Стандартное позиционирование обьекта(блока) относительно других, соседних.</p>
+                </li>
+                <li>relative
+                    <div class="pricelist_container_left">
+                        <div>static</div>
+                        <div class="relative">relative</div>
+                        <div>static</div>
+                        <p>
+                            Position:relative; + top/right/left: ; смещает блок, не влияя на соседние блоки (bottom:...; не работает). <br/>
+                            При этом может работать margin="..", но он уже будет отталкиваться от границ соседних блоков.
+                        </p>
+                    </div>
+                </li>
+                <li>absolute
+                    <div class="pricelist_container_left">
+                        <div>static</div>
+                        <div class="absolute">absolute</div>
+                        <div>static</div>
+                        <p>
+                            Position: absolute позволяет блоку позиционировать себя относительно всей страницы(body).
+                            <br/>
+                            Если задать контейнеру, в котором он находится(родителю), position: relative, тогда absolute будет позиционироваться относительного этого контейнера.
+                            <br/>
+                            Margin также прекрасно работают с absolute.
+                        </p>
+                    </div>
+                    <ul style="margin-left: 50px">
+                        <li>Tip1
+                            <div class="tip1">
+                                <div class="pos1">
+                                    <div class="pos2"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Tip2 + Tip3 (позиционирование по центру родительского блока)
+                            <div class="pricelist_container_left tip2">
+                                <img src="../images/dat1.jpg" alt="monkey">
+                                <p>
+                                    При position: absolute, а также при установке top,bottom,right,left:0 - выигрывает всегда! top+left.
+                                    <br/>
+                                    Центрирование обьекта(!с указанными width и height!, иначе содержимое растянется по границам родителя) при помощи margin:auto. Соответсвенноб можно только по высоте или ширине.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>fixed(pop-up)
+                    <div class="pricelist_container_left">
+                        <div>1</div>
+                        <div class="relative">2</div>
+                        <div class="absolute">3</div>
+                        <div class="fixed">Position: fixed(для активации раскоментировать  в css)</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>clip - обрезание обьекта</strong>
+            <div class="pricelist_container_left clipped">
+                <div class="clipped1">
+                    sadasdasdasdassadasdasdasd
+                </div>
+            </div>
+        </li>
+        <li>
+            <strong>overflow</strong>
+            <ul>
+                <li><code style="display: block;">overflow:hidden= прячет текст по границам контейнера.</code>
+                    <div class="overflow hidden">
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                    </div>
+                    <div class="kartinka">
+                        <img src="../images/dat1.jpg" alt="asd" style="width: 100px; height: 100px; margin-right: -4px">
+                        <img src="../images/dat1.jpg" alt="asd" style="width: 100px; height: 100px">
+                        <img src="../images/dat1.jpg" alt="asd" style="width: 100px; height: 100px">
+                        <img src="../images/dat1.jpg" alt="asd" style="width: 100px; height: 100px">
+                        <img src="../images/dat1.jpg" alt="asd" style="width: 100px; height: 100px">
+                        <img src="../images/dat1.jpg" alt="asd" style="width: 100px; height: 100px">
+                        <img src="../images/dat1.jpg" alt="asd" style="width: 100px; height: 100px">
+                        <img src="../images/dat1.jpg" alt="asd" style="width: 100px; height: 100px">
+                    </div>
+                </li>
+                <li><code>overflow:scroll = прячет текст по границам контейнера, но добавляет скроллы для возможности прочитать.</code>
+                    <div class="overflow scroll">
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                    </div>
+                </li>
+                <li><code>overflow:auto = хз, похоже на скролл.</code>
+                    <div class="overflow auto">
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                        asdasdasdasd <br>
+                    </div>
+                </li>
+                <li><code>text-overflow:ellipsis = показывает троеточие при ресайзинге(Работает ТОЛЬКО! с overflow:hidden контейнера). </code>
+                    <div class="kartinka textflow">
+                        asdasdasdsadasdadsdasdasdasdasdasdasdasdasdasdasdasdasdasd
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li><strong>z-index - применяется только к позиционированным элементам(relative,absolute,fixed).</strong>
+            <ul>
+                <li>z-index(1)
+                    <p>родитель(контейнер) может отображаться поверх потомка(контента)</p>
+                    <div class="index">
+                        <img src="../images/dat1.jpg" alt="asd">
+                    </div>
+                </li>
+                <li>z-index(2)
+                    <p>
+                        Есть 2 контейнера. В первом(gray) есть потомки(контент-блоки red,blue).<br/>
+                        Потомок с большим z-index перекрывает потомка с меньшим(red > blue). <br/>
+                        Родитель с большим z-index перекрывает родителя с меньшим (GRAY > GREEN), при одинаковых значениях поверх будет тот элемент, который будет ниже в коде HTML. <br/>
+                        <mark>А ТАКЖЕ ПОТОМКИ РОДИТЕЛЯ С БОЛЬШИМ z-index ПЕРЕКРЫВАЮТ ВТОРОГО РОДИТЕЛЯ</mark>(GRAY+red,blue >>> GREEN)
+                    </p>
+                    <div class="index grey">
+                        <div class="index red"></div>
+                        <div class="index blue"></div>
+                    </div>
+                    <div class="index green"></div>
+                </li>
+                <li>z-index 3
+                    <p>Использование псевдо-селекторов<code>:before :after</code></p>
+                    <div class="zindex3">some texte</div>
+                </li>
+            </ul>
+        </li>
+        <li class="table1"><strong>Table</strong>
+            <table>
+                <caption>Заголовок</caption>
+                <colgroup>
+                    <col/>
+                    <col/>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>1asdas</th>
+                    <th>2asdaa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1asdasd</td>
+                    <td>2asdasd</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td>1asdasd</td>
+                    <td>2asdasd</td>
+                </tr>
+                </tfoot>
+            </table>
+        </li>
+        <li class="table2"><strong>Таблица из div со стилями table</strong>
+            <div class="table">
+                <div class="pricelist__body_caption">Заголовок</div>
+                <div class="thead">
+                    <div class="tr">
+                        <div class="th">asd</div>
+                        <div class="th">asd</div>
+                    </div>
+                </div>
+                <div class="tbody">
+                    <div class="tr">
+                        <div class="td">asd</div>
+                        <div class="td">asd</div>
+                    </div>
+                </div>
+                <div class="tfoot">
+                    <div class="tr">
+                        <div class="td">asd</div>
+                        <div class="td">asd</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="table3"><strong>Пример Table-layout</strong>
+            <table>
+                <tr>
+                    <td class="gap"></td>
+                    <td class="leftcolumn">Левая колонка</td>
+                    <td class="middlecolumn">Центральная колонка</td>
+                    <td class="rightcolumn">Правая колонка</td>
+                    <td class="gap"></td>
+                </tr>
+            </table>
+        </li>
+
+        <li><strong>visibility -- <code>display:none  &   visibility:hidden</code></strong>
+            <p style="margin: 0">
+                Несколько блоков в ряд. <br/>
+                Номер 2 - display: none; - он изымается(как-будто удаляется вовсе) <br/>
+                Номер 5 - visibility: hidden; - сохранил занимаемое пространство, став полностью прозрачным.
+            </p>
+            <ul class="visible">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+.lesson_plan {
+    font: 600 small-caps 30px/1.5em "Comic Sans MS", sans-serif ;
+    text-shadow: -1px 2px 5px yellow;
+    background: orange;
+    margin: 0;
+}
+.lesson_caption {
+    text-align: center;
+    background: lightcyan;
+    line-height: 3em;
+    margin: 0;
+}
+.lesson_list {
+    font: bold 25px "Verdana", sans-serif;
+    color: blue;
+    letter-spacing: 1em;
+}
+.list_article__body {
+    font: normal 15px Arial, sans-serif;
+    color: black;
+    letter-spacing: normal;
+}
+
+#inet_pic {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+}

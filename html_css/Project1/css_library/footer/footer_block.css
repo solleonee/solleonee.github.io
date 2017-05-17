@@ -1,0 +1,53 @@
+
+.footer_block {
+    max-width: 1023px;
+    margin: 0 auto;
+}
+
+
+
+/*~~~ CONTACTS, SOCIAL, LINKS ~~~*/
+.socials {
+    display: inline-block;
+    width: 50%;
+    padding: 20px 0;
+    font: normal 15px/2em Arial,sans-serif;
+}
+.socials_body {
+}
+.socials_body_contacts>div {
+    margin-bottom: 15px;
+    margin-left: 40px;
+    position: relative;
+}
+.socials_body_contacts>div:before {
+    content:
+            url("../../images/galka.jpg");
+    position: absolute;
+    left: -35px;
+    top: 3px;
+}
+.socials_links {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.socials_links input {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background:
+            url("../../images/dat1.jpg")
+            no-repeat;
+    background-size: 100% 100%;
+    border-radius: 25px;
+    border: transparent;
+}
+
+/*~~~ LOCATION ~~~*/
+.maps {
+    display: inline-block;
+    width: 50%;
+    background: url("../../images/dat1.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+

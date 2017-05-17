@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Lesson2</title>
+    <style>
+        body {background-color: aliceblue;  }
+        h1 {text-align: center;
+            border: double 1px black;
+            color: orange;
+            background-color: lightblue;
+        }
+        .styler {
+            display: inline-block;
+            margin-right: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 20px;
+            border: solid 1px black;
+            background-color: antiquewhite;
+        }
+        .styler ul {display: inline-block;}
+        .styler h3 {text-align: center;}
+        .styler p {text-align: center;
+            font-style: italic;
+        }
+        div#table {display: inline-block;}
+        div#table > ul, table {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        div.styler table {
+            margin-top: -10px;
+            margin-left: 125px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        div#form {
+            height: 200px;
+        }
+        div#form form {
+            margin-top: 20px;
+        }
+        div#inputtype {
+            width: 300px;
+        }
+        div#inputtype > ul {
+            display: inline-block;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<h1>!DOCTYPE</h1>                                                                                               <!-- DOCTYPE -->
+<span>< !DOCTYPE [Элемент верхнего уровня] [Публичность] "[Регистрация]//[Организация]//[Тип] [Имя]//[Язык]" "[URL]"></span>
+<p>Подробнее <a href="http://htmlbook.ru/samlayout/rezhimy-brauzerov/doktaip" target="_blank">тут!</a></p>
+
+
+
+
+
+<h1>РЕЖИМЫ РАБОТЫ БРАУЗЕРОВ.</h1>                                                                          <!-- Режимы работы браузеров -->
+<ul>
+    <li><a href="http://htmlbook.ru/samlayout/rezhimy-brauzerov/standartnyi-rezhim" target="_blank">Стандартный режим.</a></li>
+    <li><a href="http://htmlbook.ru/samlayout/rezhimy-brauzerov/pochti-standartnyi-rezhim" target="_blank">Почти стандартный режим.</a></li>
+    <li><a href="http://htmlbook.ru/samlayout/rezhimy-brauzerov/rezhim-sovmestimosti" target="_blank">Режим совместимости.</a></li>
+</ul>
+
+
+
+
+
+<h1>Кодировка.</h1>                                                                                             <!-- КОДИРОВКА -->
+<a href="http://htmlbook.ru/content/metategi" target="_blank">Метатэги.</a>
+
+<h1>Блочные и строчные элементы.</h1>
+<ul>
+    <li>Блочный контейнер - < div >.</li>
+    <li>Строчный контейнер - < span >.</li>
+</ul>
+
+
+
+
+
+<h1>СПИСКИ.</h1>                                                                                                <!-- СПИСКИ -->
+
+<div class="styler">
+    <h3>Ненумерованные списки.</h3>
+        <p>ul>li</p>
+        <ul>
+            <li>Кофе.</li>
+            <li>Чай.</li>
+            <li>Пицца.</li>
+        </ul>
+    <p>Аттрибут <mark>type="circle, disc, square"</mark></p>
+</div>
+
+<div class="styler">
+    <h3>Нумерованные списки.</h3>
+    <p>ol>li</p>
+    <ol type="A">
+        <li>Чай.</li>
+        <li>Кофе.</li>
+        <li>Ума-турман.</li>
+    </ol>
+    <p>Бывают аттрибуты <mark>type="1,A,a,I,i", start="15", reversed="reversed"</mark></p>
+
+</div>
+
+<div class="styler">
+    <h3>Вложенные списки.</h3>
+    <p>ol>li>ul>li</p>
+    <ol>
+        <li>Sad
+            <ul>
+                <li>right</li>
+                <li>left</li>
+            </ul>
+        </li>
+        <li>True</li>
+        <li>False</li>
+    </ol>
+</div>
+
+<div class="styler">
+    <h3>Словарь определений.</h3>
+    <p>dl>dt<sub>dd</sub></p>
+    <dl>
+        <dt>sugar</dt>
+        <dd>sweet powder</dd>
+        <dt>coffee</dt>
+        <dd>black strong drink</dd>
+    </dl>
+</div>
+
+
+
+<h1>Семантические теги.</h1>                                                                         <!-- Семантические теги-->
+<div class="styler">
+    <ul type="circle">
+        <li><code>header</code> - Группирует вводные и навигационные элементы, не является обязательным. Может содержать заголовки, оборачивать содержание раздела страницы, форму поиска или логотип.</li>
+        <li><code>footer</code> - Обычно содержит информацию об авторе статьи, данные о копирайте и т.д. Если используется как колонтитул всей страницы, содержимое дополняется сведениями об авторских правах, ссылками на условия использования, контактную информацию, ссылками на связанное содержимое и т.п.</li>
+        <li><code>figure</code> - представляет автономный контент (необязательно с заголовком), являющийся самостоятельным элементом основного потока. Элемент может быть перемещен из основного содержимого документа в боковую колонку или приложение, не затрагивая поток документа. С помощью элемента <code>figure</code> можно добавлять краткие характеристики к иллюстрациям, фотографиям, диаграммам, фрагментам кода и т.д..</li>
+        <li><code>figcaption</code> - потомок элемента figure, не принадлежит ни к одной категории контента. Элемент является блочным, по ширине равен ширине элемента figure, высота по умолчанию равна 18px.</li>
+        <li><code>time</code> - Определяет время (24 часа) или дату по григорианскому календарю с возможным указанием времени и смещения часового пояса. Текст, заключенный в данный тег, не имеет стилевого оформления браузером. Для тега доступен атрибут datetime, в качестве содержимого которого указывается то, что будет видеть пользователь на экране своего компьютера.</li>
+        <li><code>main</code> - Контент, находящийся внутри элемента, должен быть уникальным и не повторяться во всех документах сайта, таких как навигационные ссылки, информация о копирайте, логотипы, формы поиска</li>
+    </ul>
+</div>
+<div class="styler">
+    <ul type="circle">
+        <li><code>nav</code> - Предназначен для создания блока навигации веб-страницы или всего веб-сайта, при этом не обязательно должен находиться внутри <code>header</code>.</li>
+        <li><code>section</code> - В качестве содержимого может выступать оглавление, разделы научных публикаций, программа мероприятия.</li>
+        <li><code>article</code> - Используется для группировки записей — публикаций, статей, записей блога, комментариев. Представляет собой независимый обособленный блок, предназначенный для многократного использования, как правило, начинается с заголовка. </li>
+        <li><code>aside</code> - Группирует содержимое, связанное с окружающим его контентом напрямую, но которое можно счесть отдельным (т.е., удаление этого блока не повлияет на понимание основного содержимого).</li>
+        <li><code>mark</code> - С помощью данного тега можно отмечать важное содержимое, а также ключевые слова.</li>
+    </ul>
+</div>
+
+
+
+<h1>ТАБЛИЦЫ.</h1>                                                                                          <!-- ТАБЛИЦЫ -->
+
+<div class="styler">
+    <div id="table">
+        <h3>Элементы table:</h3>
+        <ul>
+            <li><code>caption</code> - заголовок таблицыб находится сверху снаружи.</li>
+            <li><code>tr</code> - строка(по-горизонтали) таблицы.</li>
+            <li><code>th</code> - ячейка, выделенная жирным шрифтом.</li>
+            <li><code>td</code> - обычная ячейка с содержимым.</li>
+        </ul>
+        <table border="1px">
+            <caption>зооджунгли</caption>
+            <tr>
+                <th>кошка</th>
+                <th>собака</th>
+            </tr>
+            <tr>
+                <td>вискас</td>
+                <td>педигри</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="styler">
+    <h3>Склеивание ячеек.</h3>
+    <p>При помощи аттрибутов к ячейкам <mark>th,td</mark></p>
+    <ul type="circle">
+        <li><code>colspan=""</code> - склеивает ячейки по горизонтали(вправо).</li>
+        <li><code>rowspan=""</code> - склеивает ячейки по вертикали(вниз)</li>
+    </ul>
+    <table border="1px">
+        <caption></caption>
+            <tr>
+                <td rowspan="2">FIRST</td>
+                <td colspan="2">SECOND</td>
+            </tr>
+            <tr>
+                <td>FOURTH</td>
+                <td>SIXTH</td>
+            </tr>
+    </table>
+</div>
+<div class="styler">
+    <h3>Группировка блоков таблиц.</h3>
+    <ul type="circle">
+        <li><code>thead</code></li>
+        <li><code>tbody</code></li>
+        <li><code>tfoot</code></li>
+        <li><code>caption</code></li>
+        <li><code>col</code></li>
+        <li><code>colgroup</code></li>
+    </ul>
+    <footer style="text-align: right">
+        <small><a href="https://html5book.ru/html-table/#grouping" target="_blank">подробней тут</a></small>
+    </footer>
+</div>
+
+
+
+                                                                                                                <!-- ФОРМЫ -->
+<h1>ФОРМЫ.</h1>
+<div class="styler">
+    <h3>Example:</h3>
+    <form name="form" action="/">
+        <input type="text" name="login" value="here" title="text"> <br>
+        <input type="password" name="password"> <br>
+        <input type="submit" value="search">
+    </form>
+</div>
+<div class="styler">
+    <h3>Аттрибут <code>type=""</code> для input :</h3>
+    <p>radio, checkbox, submit, reset</p>
+
+    <form action="//">
+        <input type="radio" name="sex" value="male">male
+        <input type="radio" name="sex" value="female">female
+        <br> <br>
+        <input type="checkbox" name="car" value="volvo">volvo
+        <input type="checkbox" name="car" value="bmw">bmw
+        <input type="checkbox" name="car" value="sedan">sedan
+        <br> <br>
+        <input type="submit" value="DONE">
+        <input type="reset" value="CLEAR">
+    </form>
+</div>
+<div class="styler" id="inputtype">
+    <h3>Другие значения аттрибута type="" для input:</h3>
+    <ul>HTML4
+        <li><code>text</code></li>
+        <li><code>password</code></li>
+        <li><code>submit</code></li>
+        <li><code>reset</code></li>
+        <li><code>button</code></li>
+        <li><code>image</code></li>
+        <li><code>hidden</code></li>
+        <li><code>checkbox</code></li>
+        <li><code>radio</code></li>
+        <li><code>file</code></li>
+    </ul>
+    <ul>HTML5
+        <li><code>search</code></li>
+        <li><code>email</code></li>
+        <li><code>url</code></li>
+        <li><code>tel</code></li>
+        <li><code>number</code></li>
+        <li><code>range</code></li>
+        <li><code>time</code></li>
+        <li><code>date</code></li>
+        <li><code>week</code></li>
+        <li><code>month</code></li>
+        <li><code>color</code></li>
+    </ul>
+</div>
+<div class="styler">
+    <h3>Textarea.</h3>
+    <ul>Аттрибуты:
+        <li><code>rows=""</code> - строки в поле.</li>
+        <li><code>cols=""</code> - колонки\кол-во символов в каждой строке.</li>
+        <li><code>placeholder=""</code> - полупрозрачный текс внутри поля.</li>
+    </ul>
+    <textarea name="text" id="q1" cols="20" rows="5" placeholder="тут будет вводиться текст"></textarea>
+</div>
+<div class="styler">
+    <h3>Select>optgroup>option.</h3>
+    <ul>Аттрибуты к select:
+        <li><code>name</code></li>
+        <li><code>size</code></li>
+        <li><code>multiple</code></li>
+    </ul>
+    <ul>аттрибуты к option:
+        <li><code>value</code></li>
+        <li><code>selected="selected"</code></li>
+        <li><code>label</code></li>
+    </ul>
+    <ul>Аттрибуты к optgroup:
+        <li><code>label</code></li>
+    </ul>
+    <br>
+    <label for="sel">THE CHOICE</label>
+    <select name="sel" id="sel" multiple="multiple" size="2">
+        <option value="beer" selected="selected">cheese</option>
+        <option value="cheese">beer</option>
+        <option value="vagina">girl</option>
+    </select>
+
+    <label for="sel2">OPTGROUP EXAMPLE</label>
+    <select name="sel2" id="sel2" size="4" multiple="multiple">
+        <optgroup label="cars">
+            <option value="ger">bmw</option>
+            <option value="fra">sedan</option>
+            <option value="rus">volga</option>
+        </optgroup>
+        <optgroup label="beer">
+            <option value="ger" selected="selected">bavaria</option>
+            <option value="rus">жигули</option>
+            <option value="usa">stfu</option>
+        </optgroup>
+    </select>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

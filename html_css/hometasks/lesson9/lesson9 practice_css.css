@@ -1,0 +1,41 @@
+
+
+.container {
+    display: flex;
+}
+.column {
+    width: 50%;
+}
+
+.person {
+    margin-bottom: 30px;
+    position: relative;
+}
+.person_image {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+.person_image img {
+    width: 85px;
+    height: 85px;
+}
+.content {
+    margin: 0 20px 0 135px;
+}
+.content_title {
+    font: 22px sans-serif;
+    color: #637f83;
+}
+.article {
+    font: 300 14px "Verdana", sans-serif;
+    color: #959595;
+    line-height: 2em;
+}
+.more {
+    color: #e4551d;
+    text-decoration: none;
+}
+.more:hover {
+    text-decoration: underline;
+}

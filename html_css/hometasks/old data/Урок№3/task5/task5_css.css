@@ -1,0 +1,19 @@
+.red {color: red;}
+.blue {color: blue;}
+.green {color: green;}
+
+/* Вариант №1*/
+input#red:checked ~ div .red {display: none}
+input#red:checked ~ div .blue, div .green {}
+
+input#green:checked ~ div .green {display: none;}
+input#green:checked ~ div .red, div .blue {}
+
+input#blue:checked ~ div .blue {display: none;}
+input#blue:checked ~ div .red, div .green {}
+
+/*Вариант№2*/ /*работает посредственно, так как когда фокус спадает (например, любой клик на странице), {параметры значений} перестают функционировать*/
+
+/*input#red:focus ~ div .red {display: none}*/
+/*input#red:focus ~ div .blue, div .green {}*/
+

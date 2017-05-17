@@ -1,0 +1,119 @@
+.header {
+    display: flex;
+    max-width: 1023px;
+    margin: 0 auto;
+
+}
+
+/*!!!!!!!!!!!!!! COMPANY NAME !!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.company_logo {
+    display: inline-block;
+    width: 30%;
+    min-width: 116px;
+    padding: 10px 0;
+    color: orange;
+    font: 25px "Arial Narrow",sans-serif;
+    letter-spacing: 3px;
+
+
+}
+.company_logo_name {
+    letter-spacing: normal;
+    text-transform: uppercase;
+    color: dodgerblue;
+    font: bold 120% Arial,sans-serif;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!  NAVIGATION MENU !!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.navigation_container {
+    display: inline-block;
+    width: 70%;
+    line-height: 2.2em;
+
+
+
+    position: relative;
+    /*для подменю, которое отображается по ховеру на 100% ниже этого основного контейнера*/
+}
+
+.menu_sector {
+    display: inline-block;
+
+
+}
+.menu_sector a {
+    display: inline-block;
+    padding: 10px 15px;
+    border-bottom: 5px solid transparent;
+
+    color: grey;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.menu_sector:hover>a  {
+    color: dodgerblue;
+    border-bottom: 5px solid dodgerblue;
+}
+
+
+/*~~~ MENU_2 ~~~*/
+
+
+/*отображение подменю*/
+.menu_sector a:hover + .menu2_container {
+    visibility: visible;
+    animation: oppa 0.5s;
+
+}
+.menu2_container:hover {
+    visibility: visible;
+
+
+
+
+}
+/*------------------------*/
+.menu2_container {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: grey;
+
+}
+.menu2_sector {
+    display: inline-block;
+    /*margin: 0 auto;*/
+}
+.menu2_sector a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: red;
+}
+.menu2_sector:hover a  {
+    background-color: yellow;
+    color: green;
+}
+
+
+
+/*~~~ animation ~~~*/
+@keyframes oppa {
+    from {opacity: 0;}
+    50% {opacity: 0.1;}
+    75% {opacity: 0.5;}
+    85% {opacity: 0.6;}
+    95% {opacity: 0.7;}
+    to {opacity: 1;}
+}
+
+
+

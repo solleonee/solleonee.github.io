@@ -1,0 +1,42 @@
+.presentation {
+    background: url("../../images/lesson6%20task2.png");
+    background-size: 100% 100%;
+    display: flex;
+
+}
+.present_content {
+    width: 1023px;
+    margin: 0 auto;
+    /*margin: 0 10%;*/
+    padding: 3% 0;
+    text-align: center;
+    color: white;
+    font: 100 14px Arial,sans-serif;
+}
+.present_content__first-line {
+    font: 400 100% "Segoe Print",sans-serif;
+}
+.present_content__specifics {
+    text-transform: uppercase;
+    font: 700 2em Arial, sans-serif;
+}
+.present_content__afterwords {
+    padding: 20px 30%;
+    font: 100 italic 0.7em "Calibri",sans-serif;
+    letter-spacing: 0.2em;
+}
+.present_content__button {
+    background: transparent;
+    color: white;
+    padding: 10px 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.present_content__button:hover {
+    background: white;
+    color: black;
+    transition:
+    background 0.5s linear,
+    color 0.4s linear
+;
+
+}

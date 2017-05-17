@@ -1,0 +1,19 @@
+nav {
+    font-size: 30px;
+    font-weight: bold;
+}
+.nav {
+    color: blue;
+}
+.yandx {
+    color: #f70;
+}
+.google {
+    color: #666;
+}
+.yandx.yandx1:after {
+    content: "⇱";
+    color: green;
+    display: inline-block;
+    transform: rotate(90deg);
+}

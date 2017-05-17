@@ -1,0 +1,93 @@
+.pics_container {
+    max-width: 978px;
+    margin: 0 auto;
+    padding: 0 0 0 20px;
+}
+
+.pics_caption {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.pics_caption h1 {
+    color: darkslategrey;
+}
+.pics_caption p {
+    font-size: 18px;
+    color: grey;
+    opacity: 0.8;
+}
+
+
+.pics_box {
+    display: inline-flex;
+    position: relative;
+    margin: 0 20px 20px 0;
+
+    width: 300px;
+    height: 200px;
+
+    background: url("images/dat1.jpg");
+    background-size: 100% 100%;
+
+    border-radius: 3px;
+    box-shadow: 1px 1px 6px black;
+}
+
+
+.pics_box:hover > .bg_box {
+    visibility: visible;
+    background: rgba(55,155,255,0.7);
+    transition: background 0.6s ease;
+}
+.bg_box {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.bg_box form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    width: 130px;
+    height: 60px;
+
+    background: transparent;
+}
+.bg_box input {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: transparent;
+}
+.bg_box input:hover {
+    border-width: 4px 4px 1px 1px;
+    border-color: white white whitesmoke whitesmoke;
+    animation: opac 0.4s;
+    opacity: 0.7;
+}
+.x:hover {
+    background: url("images/x.jpg");
+}
+.y:hover {
+    background: url("images/y.jpg");
+}
+
+@keyframes opac {
+    from {opacity: 0}
+    25% {opacity: 0}
+    50% {opacity: 0.2}
+    75% {opacity: 0.6}
+    to {opacity: 0.7}
+}

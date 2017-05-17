@@ -1,0 +1,27 @@
+ul {font-size: 25px;}
+
+.pricelist__header {color: blue;}
+.yandex {color: orangered;}
+.google {color: dimgrey;}
+
+/*Привязка знака "стрелочка" к одному из элементов списка*/
+/*способ№1*/
+ul li:nth-child(5) a::after
+{
+    content:'⇱';
+    color: orangered;
+    display: inline-block;
+    transform: rotate(90deg)
+}
+
+
+
+span
+{
+    font-size: 40px;
+    border: solid 1px black;
+    background: lightcyan;
+    color: blue;
+    display: inline-block;
+    /*transform: rotate(90deg)*/
+}

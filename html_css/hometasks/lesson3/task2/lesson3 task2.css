@@ -1,0 +1,4 @@
+p:first-of-type {font-weight: bold;}
+p:first-of-type:first-letter {font-size: 50px; color: red;}
+
+p:last-of-type {color: #cccccc}

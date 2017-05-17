@@ -1,0 +1,32 @@
+
+nav {
+    background-color: blueviolet;
+}
+div {
+    width: 900px;
+    margin: 30px auto;
+}
+a   {
+    display: inline-block;
+    padding: 5px 10px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Impact;
+}
+a:hover {
+    background-color: #cccccc;
+    color: #999999;
+
+    border: solid lightgrey;
+    border-width: 1px 0;
+    margin: -1px 0;
+}
+a:last-of-type {
+    float: right;
+}
+
+
+
+

@@ -1,0 +1,63 @@
+.lesson_plan {
+    font: 600 small-caps 30px/1.5em "Comic Sans MS", sans-serif ;
+    text-shadow: -1px 2px 5px yellow;
+    background: orange;
+    margin: 0;
+}
+.lesson_caption {
+    text-align: center;
+    background: lightcyan;
+    line-height: 3em;
+    margin: 0;
+}
+.cond-comments_body {
+    background: lightgrey;
+}
+
+/*!!!~~~ -webkit свойства ~~~!!!*/
+
+.background_clip {
+    font: bold 50px serif;
+    color: transparent;
+    background:
+            url("../images/dat1.jpg");
+    -webkit-background-clip: text;
+}
+.text_stroke {
+    font: bold 20px "Comic Sans MS", sans-serif;
+    color: darkcyan;
+    -webkit-text-stroke: 0.05em orange;
+}
+
+.mask_img {
+    display: block;
+    width: 500px;
+    height: 300px;
+    background-size: 100% 100%;
+    -webkit-mask: url(../images/galka.jpg);
+}
+.reflect_image {
+    display: block;
+    -webkit-box-reflect: below 0
+    -webkit-linear-gradient(bottom,rgba(255,255,255,0.3) 13%, rgba(255,255,255,0) 25%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

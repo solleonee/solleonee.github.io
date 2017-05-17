@@ -1,0 +1,211 @@
+body {z-index: 1}
+            /*~~~ POP-UP Navigation ~~~*/
+nav {
+    z-index: 2;
+    width: 210px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+
+}
+nav h1 {
+    text-align: center;
+    text-shadow: 0 0 15px red;
+    padding: 10px 0;
+    visibility: visible;
+    margin: 0 0 0 -40px;
+    opacity: 0.8;
+
+}
+nav h1:hover,
+.nav_list:hover>h1
+{
+    background: #000;
+    color: #333;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+}
+.nav_list {
+    visibility: hidden;
+    background: grey;
+    border: solid black;
+    border-width: 0 0 2px 2px;
+    margin: 0;
+}
+nav h1:hover + .nav_list {
+    visibility: visible;
+}
+
+.nav_list:hover {visibility: visible;}
+.nav_list li:hover {
+    text-decoration: underline;
+    font-size: 15px;
+}
+.nav_list a {
+    color: red;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------------------------*/
+
+h2  {
+    font-size: 50px;
+    text-align: center;
+    font-variant: small-caps;
+}
+code    {
+    background: lightgoldenrodyellow;
+}
+.list_item__caption {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: blue;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+                         /*~~~ ЧИСЛА ~~~*/
+.box {
+    width: 50px;
+    height: 50px;
+    background: red;
+}
+.example_opacity {
+    opacity: 0.3;
+}
+.example_lineheight {
+    line-height: 1.7;
+}
+
+
+
+                    /*~~~ ПРОЦЕНТНЫЕ ЗНАЧЕНИЯ ~~~*/
+.container_percentage {
+width: 300px;
+height: 100px;
+
+background:
+red
+url("../images/dat1.jpg")
+50% 50%
+no-repeat;
+}
+
+.box_percent {
+width: 50%;
+height: 50%;
+position: relative;
+background-color: yellow;
+/*Центрируем по ширине*/
+left: 25%;
+/*вариант№2*/
+    /*margin-left: 50%;*/
+    /*left: -25%;*/
+}
+
+
+
+                       /*~~~ ЦВЕТ ~~~*/
+.color {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 3;
+}
+.rgb {background: rgb(126,255,1);}
+.rgba {background: rgba(255,0,0,0.25);}
+.hsl {background: hsl(25,50%,75%);}
+.hsla {background: hsla(10,60%,90%,0.5);}
+
+                /*~~~ Измерение длины em/rem/ex ~~~*/
+.font_size__body:before {
+    content: "body";
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.font_size__body {
+    box-sizing: content-box;
+    margin-top: 5px;
+    padding: 8px 15px;
+    border:1px solid black;
+    font-size: 13px;
+    position: relative;
+}
+.font_size__container {
+    background: lightgray;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.font_size__container>span {
+    display: inline-block;
+    white-space: nowrap;
+    /*vertical-align: top;*/
+    border:1px solid blue;
+}
+.em {font-size: 1.1em;}
+.ex {font-size: 1ex;}
+.rem {font-size: 1rem;}
+
+                              /*~~~ calc)() ~~~*/
+.calc {
+    background: lightblue;
+    width: calc(100% - 500px);
+    padding-left: 5px;
+}
+
+/*~~~ FONTS ~~~*/
+.font_settings li {margin: 7px 0;}
+.small_caps {font-variant: small-caps;}
+.uppercase {text-transform: uppercase;}
+.lowercase {text-transform: lowercase;}
+.capitalize {text-transform: capitalize;}
+.italic {font-style: italic;}
+
+.font_writing {
+}
+.font_writing li {
+    list-style-position: outside;
+    display: inline-block;
+}
+.font_writing_example {
+    font: bold italic small-caps 15px/0.5 Arial, sans-serif;
+}
+
+/*~~~ СВОЙСТВА ТЕКСТА ~~~*/
+
+.text_indent_plus {text-indent: 3em;}
+.text_indent_minus {text-indent: -1.4em;}
+
+.text_justify {text-align: justify;}
+
+.text_spacing {
+    letter-spacing: 0.25em;
+    word-spacing: 1em;
+}
+.text_decoration {
+    font-size: 20px;
+    line-height: 2em;
+    text-decoration: underline overline line-through;
+}
+.text_shadow__container {
+    padding: 10px 30px;
+    background: #000;
+    color: #333;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.7)
+}
+.text_shadow__transparent {
+    color: rgba(0,0,0,0);
+    text-shadow: 0 0 2px #555;
+}
+.multi_column {
+    column-count: 4;
+    -webkit-column-count: 4;
+    column-width: 130px;
+    -webkit-column-width: 130px;
+    column-gap: 40px;
+    -webkit-column-gap: 40px;
+}
+

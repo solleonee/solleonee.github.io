@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson5 task2</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 600px;
+            border: 5px solid orange;
+            border-radius: 5px;
+            margin: 60px 0 0 60px;
+            box-shadow: black;
+        }
+        .pricelist__body_caption {
+            height: 125px;
+            background-color: orange;
+            position: relative;
+        }
+        .pricelist__body_caption >div {
+            width: 200px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto auto;
+        }
+        .pricelist__body_caption span {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+        .pricelist__body_sellout-price {
+            height: 175px;
+            position: relative;
+        }
+        .pricelist__body_sellout-price div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            width: 260px;
+            margin: 10px auto;
+
+            color: darkslateblue;
+        }
+        .pricelist__body_sellout-price div:first-child {
+            color: black;
+        }
+        .pricelist__body_sellout-price div span {
+            font-size: 30px;
+        }
+        .pricelist__body_sellout-price div:nth-of-type(2) {
+            top: 50px;
+            text-align: center;
+        }
+        .pricelist__body_sellout-price div:nth-of-type(2) span
+        {
+            font-size: 80px;
+            font-family: Impact, sans-serif;
+        }
+        .pricelist__body_sellout-price div:nth-of-type(2) span:before {
+            content: "$";
+            font-size: 30px;
+            vertical-align: top;
+            font-family: Calibri, sans-serif;
+        }
+        .pricelist__body_sellout-price div:nth-of-type(2) span:after {
+            content: "Monthly";
+            font-size: 25px;
+            vertical-align: bottom;
+            font-family: Calibri, sans-serif;
+        }
+        .pricelist__list-of-bonuses {
+            width: auto;
+            height: 175px;
+            margin: 0 15px;
+        }
+        .pricelist__list-of-bonuses div {
+            height: 23%;
+            position: relative;
+            margin: 3px 0;
+        }
+        .pricelist__list-of-bonuses div:nth-child(2n-1) {
+            background-color: lightcyan;
+        }
+        .pricelist__list-of-bonuses div:nth-child(2n-2) {
+            background-color: whitesmoke;
+        }
+        .pricelist__list-of-bonuses span {
+            width: 200px;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            line-height: 2.5;
+            color: gray;
+            font-size: 17px;
+            font-family: "Segoe MDL2 Assets", sans-serif;
+        }
+        .pricelist__list-of-bonuses img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .pricelist__footer_enroll-button {
+            height: 120px;
+            position: relative;
+        }
+        .pricelist__footer_enroll-button input {
+            display: block;
+            background-color: orange;
+            border: solid orangered;
+            border-width: 0 0 5px 0;
+            border-radius: 10px;
+
+            width: 370px;
+            height: 60px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto auto;
+
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .pricelist__footer_enroll-button input:hover {
+            border-width: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="pricelist__body_caption">
+        <div><span>BEST VALUE</span></div>
+    </div>
+    <div class="pricelist__body_sellout-price">
+        <div><span>ICONIC GRAPHICS</span></div>
+        <div><span>25</span></div>
+    </div>
+    <div class="pricelist__list-of-bonuses">
+        <div><span><img src="../../images/galka.jpg" alt="asd">PHP, PERL, ASP, JSP</span></div>
+        <div><span><img src="../../images/galka.jpg" alt="asd">SEMI DEDICATED</span></div>
+        <div><span><img src="../../images/galka.jpg" alt="asd">Staging or Production</span></div>
+        <div><span><img src="../../images/galka.jpg" alt="asd">Unlimited e-Mails</span></div>
+    </div>
+    <div class="pricelist__footer_enroll-button">
+        <input type="button" value="ENROLL TODAY">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

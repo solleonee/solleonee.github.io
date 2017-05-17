@@ -1,0 +1,44 @@
+.usages_body {
+    max-width: 1023px;
+    margin: 0 auto;
+    padding: 4% 0;
+    white-space: nowrap;
+}
+.usages_body_caption {
+    text-align: center;
+    white-space: normal;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+.usages_body__column {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 5%;
+    width: 33%;
+    text-align: center;
+    padding: 0 40px;
+}
+.usages_body__column_image img {
+    width: 50%;
+    height: 50%;
+
+    max-width: 200px;
+    max-height: 200px;
+
+    min-width: 75px;
+    min-height: 75px;
+
+    border-radius: 100px;
+}
+.usages_body__column_content_title {
+    text-transform: uppercase;
+    color: dodgerblue;
+    font: 500 100% Arial,sans-serif;
+
+}
+.usages_body__column_content_text {
+    white-space: normal;
+    font: 13px sans-serif;
+    opacity: 0.6;
+    word-spacing: 0.4em;
+}

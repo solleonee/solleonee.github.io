@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson4</title>
+
+    <style>
+        div.pricelist_container_left {
+            background-color: #ddebf7;
+            width: 300px;
+            height: 300px;
+            border: solid 1px red;
+            margin: 20px auto;
+        }
+        div.block {
+            box-sizing: border-box;
+            background-color: orange;
+            margin-top: 60px;
+            padding: 0 10px 0 20px;
+            border: solid 5px black;
+        }
+        div.pricelist_container_left.centered {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        div.cube {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        div.classic {
+            border: solid 1px black;
+            background-color: orange;
+            width: 300px;
+            margin: 10px auto;
+        }
+        div.classic.v2 {
+            margin: 0 0 40px auto;
+           /*margin-left: auto;*/
+        }
+        div.pricelist_container_left.quad {
+            background-color: aquamarine;
+            margin: -20px -20px 20px 20px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="classic">
+    Блок по центру страницы
+</div>
+<div class="classic v2">
+    Блок приклеивается к правой стороне.
+</div>
+
+<hr/>
+
+<div class="pricelist_container_left">Растягивание контента (блока) по ширине контейнера.
+    <div class="block">4
+    </div>
+</div>
+
+<hr/>
+
+<div class="pricelist_container_left centered">Центрирование контента(блока) относительно контейнера.
+    <div class="cube">
+        1
+    </div>
+</div>
+
+<hr style="margin-bottom: 60px">
+
+<div class="pricelist_container_left">
+    <div class="pricelist_container_left quad">
+        <p style="text-align: center;">Пример отрицательного margin.</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+.pricelist_container_middle,
+.pricelist_container_left,
+.pricelist_container_right
+{
+    width: 300px;
+    border-radius: 5px;
+    /*box-shadow: red; !*???????как пользоваться???????????*!*/
+}
+.pricelist__header {
+    background-color: coral;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.pricelist__body {
+    background-color: white;
+}
+.pricelist__body_caption {
+    text-align: center;
+    padding: 20px 0;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+.pricelist__body_sellout-price {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: darkslategrey;
+}
+.pricelist__body_sellout-price:before {
+    content: "$";
+    font-size: 20px;
+    vertical-align: top;
+}
+.pricelist__body_sellout-price:after {
+    content: "Monthly";
+    font-size: 15px;
+    vertical-align: bottom;
+}
+.pricelist__list-of-bonuses {
+    padding: 20px 10px;
+    font-family: Calibri, sans-serif;
+    font-size: 14px;
+    color: darkgray ;
+
+}
+.pricelist__list-of-bonuses div {
+    margin: 2px 0;
+    padding: 3px 0 3px 25%;
+}
+.pricelist__list-of-bonuses div:nth-child(odd) {
+    background-color: lightcyan;
+}
+.pricelist__list-of-bonuses div:nth-child(even) {
+    background-color: whitesmoke;
+}
+.pricelist__list-of-bonuses div:before {
+    content: url("../../images/galka.jpg");
+    position: relative;
+    top: 2px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.pricelist__footer {
+    background-color: white;
+
+}
+.pricelist__footer_enroll-button {
+    margin: auto 15px;
+}
+.pricelist__footer_enroll-button input {
+    box-sizing: content-box;
+    width: 100%;
+    background-color: orange;
+    padding: 15px 0;
+    margin-bottom: 15px;
+
+    font-size: 18px;
+    color: white;
+
+    border-radius: 15px;
+    border: solid orangered;
+    border-width: 0 0 4px 0;
+}
+.pricelist__footer_enroll-button input:hover {
+    border-width: 0;
+    color: orangered;
+    margin-bottom: 19px;
+}
+
+
+/*~~~ Lesson6 task: 3prices of a kind ~~~*/
+.title {
+    text-align: center;
+}
+.pricelists {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /*align-content: center;*/
+}
+.pricelist_container_middle {
+    border: 4px solid coral;
+    z-index: 3;
+}
+.pricelist_container_left,
+.pricelist_container_right {
+    border: solid lightgrey 1px;
+    border-radius: 2px;
+    margin: 10px 0;
+}
+.pricelist_container_left {
+    border-width: 1px 0 1px 1px;
+    z-index: 1;
+}
+.pricelist_container_left .pricelist__header {
+    background: deepskyblue;
+}
+.pricelist_container_left .pricelist__footer_enroll-button input {
+    background-color: dodgerblue;
+    border-color: blue;
+}
+.pricelist_container_right {
+    border-width: 1px 1px 1px 0;
+    z-index: 1;
+}
+.pricelist_container_right .pricelist__header {
+    background: mediumseagreen;
+}
+.pricelist_container_right .pricelist__footer_enroll-button input {
+    background-color: dodgerblue;
+    border-color: blue;
+}
+.pricelist_container_left .pricelist__footer_enroll-button input:hover,
+.pricelist_container_right .pricelist__footer_enroll-button input:hover {
+    color: blue;
+}

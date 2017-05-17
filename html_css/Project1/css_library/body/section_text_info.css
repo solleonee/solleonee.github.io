@@ -1,0 +1,46 @@
+.text_info {
+    background: url("../../images/lesson6%20task2.png");
+    background-size: 100% 100%;
+}
+.text_info__body {
+    max-width: 1023px;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 3% 0 3% 30px;
+    color: white;
+
+}
+.text_info__body_title {
+    text-transform: uppercase;
+    color: orange;
+    font: 400 25px/1.6em Arial, sans-serif;
+}
+.text_info__body_paragraph {
+    font-style: italic;
+}
+.text_info__body_list {
+    font: 200 1em "Dialog", sans-serif;
+    list-style-type: none;
+    opacity: 0.5;
+}
+.text_info__body_list li {
+    margin-top: 2em;
+}
+.text_info__body_list li:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    color: white;
+    background: white;
+    border: 1px solid white;
+    border-radius: 7px;
+}
+.text_info__body_list li:nth-of-type(even) {
+    color: dodgerblue;
+}
+.text_info__body_list li:nth-of-type(even):before {
+    background: dodgerblue;
+    border-color: dodgerblue;
+}

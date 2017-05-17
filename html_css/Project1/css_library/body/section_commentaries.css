@@ -1,0 +1,74 @@
+.commentaries {
+    padding: 7% 0;
+    background:
+    url("../../images/lesson6%20task2.png");
+    background-size: 100% 100%;
+
+}
+.commentaries_body {
+    display: flex;
+    max-width: 1023px;
+    min-width: 538px;
+    margin: 0 auto;
+}
+.commentaries__header {
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+}
+.commentaries__header div {color: deepskyblue;}
+.commentaries__header span {color: coral;}
+.commentaries__content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.commentaries_women-column,
+.commentaries_men-column {
+    padding: 0 30px;
+    overflow: hidden;
+}
+.commentaries_person {
+    display: flex;
+    margin-top: 20px;
+}
+.person_content {
+    max-width: 500px;
+    position: relative;
+    margin-left: 20px;
+    padding: 0 15px;
+    font-size: 13px;
+    font-family: "Calibri Light", sans-serif;
+    background-color: white;
+}
+.person_content .topic {
+    overflow: hidden;
+    padding: 5px 0;
+    border-bottom: 1px dashed grey;
+    font-style: italic;
+    color: cornflowerblue;
+}
+.person_content .topic .name {float: left;}
+.person_content .topic .whois {float: right;}
+.person_content .text {
+    padding: 10px 0;
+    color: lightslategrey;
+    text-align: justify;
+}
+/*~~~ ADVANCED ~~~*/
+.person_photo img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: -5px;
+}
+.person_content .triangle {
+    position: absolute;
+    top: 35px;
+    left: -29px;
+
+    width: 0;
+    height: 0;
+
+    border: solid 15px;
+    border-color: transparent white transparent transparent;
+}

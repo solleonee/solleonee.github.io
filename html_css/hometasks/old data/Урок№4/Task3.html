@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div {
+        color: blueviolet;
+    }
+    input {
+        display: inline-block;
+        color: blueviolet;
+        background-color: white;
+        border-radius: 10px ;
+    }
+    input:focus {
+        background-color: blueviolet;
+        color: white;
+        /*border: 1px solid black;*/
+        /*border: transparent;*/
+    }
+    span.dots1 {
+        color: black;
+        display: inline-block;
+        vertical-align: bottom;
+        line-height: 10px;
+    }
+    span {
+        margin: 0 10px;
+    }
+</style>
+<body>
+<div>
+    <span><< First</span>
+    <span><< Prev</span>
+
+    <label for="test"></label>
+    <input id="test" type="button" value="1">
+    <input type="submit" value="2">
+    <span class="dots1">...</span>
+    <input type="button" value="5">
+    <input type="button" value="6">
+    <input type="button" value="7">
+    <input type="button" value="8">
+    <input type="button" value="9">
+    <span>Next>></span>
+    <span>Last>></span>
+</div>
+</body>
+</html>

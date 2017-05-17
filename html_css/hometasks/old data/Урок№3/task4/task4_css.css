@@ -1,0 +1,3 @@
+table {border-collapse: collapse; width: 50%; text-align: center;}
+table tr:nth-child(even) {background: #ddebf7;}
+table tr td:nth-child(2n+3) {background: #f2f2de;}

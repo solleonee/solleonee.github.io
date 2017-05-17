@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson6</title>
+    <link rel="stylesheet" href="lesson6.css">
+</head>
+
+<body>
+<nav>
+    <h1>Навигация</h1>
+    <ul>
+        <li><a href="#list">Списки</a></li>
+        <li><a href="#content">Генерируемое содержимое</a></li>
+        <li><a href="#layouts">Лейауты</a></li>
+        <li><a href="#flex">flexbox</a></li>
+        <li><a href="#m-query">Стили для разных сред</a></li>
+    </ul>
+</nav>
+
+<h3 id="list">Списки</h3>
+<div class="tables">
+    <table class="ul">
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <caption>list-style-type (ul)</caption>
+        <thead>
+        <tr>
+            <th>Value</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>none</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>disc (default)</td>
+            <td>A filled-in circle</td>
+        </tr>
+        <tr>
+            <td>circle</td>
+            <td>An empty circle</td>
+        </tr>
+        <tr>
+            <td>square</td>
+            <td>A filled-in square</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="ol">
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <caption>list-style-type (ol)</caption>
+        <thead>
+        <tr>
+            <th>Value</th>
+            <th>Example</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>decimal(number)</td>
+            <td>1,2,3,4,5</td>
+        </tr>
+        <tr>
+            <td>lower-alpha (alphanumeric characters)</td>
+            <td>a, b, c , d , f</td>
+        </tr>
+        <tr>
+            <td>upper-roman (roman numerals)</td>
+            <td>I, II, III, IV, V</td>
+        </tr>
+        <tr>
+            <td>lower greek</td>
+            <td>alpha, betta, gamma</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="lists">
+    <div class="stylepos">
+        <p>list-style-position: inside</p>
+        <ol>
+            <li>
+                <ul>инсайд задан этому ul
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>b</li>
+                    <li>c</li>
+                    <li>d</li>
+                </ul>
+            </li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </div>
+    <div class="styleimg">
+        <p>list-style-image: url(...)
+            но лучше использовать псевдо-селектор :before
+        </p>
+        <ol>
+            <li>111111111
+                <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>b</li>
+                    <li>c</li>
+                    <li>d</li>
+                </ul>
+            </li>
+            <li>2222222</li>
+            <li>333333</li>
+            <li>444444</li>
+        </ol>
+    </div>
+    <div class="listmarker">
+        <p>list marker color</p>
+        <ol>
+            <li><span>aaaaa</span>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>b</li>
+                    <li>c</li>
+                    <li>d</li>
+                </ul>
+            </li>
+            <li><span>bbbbb</span></li>
+            <li><span>ccccc</span></li>
+            <li><span>ddddd</span></li>
+        </ol>
+    </div>
+</div>
+<h3 id="content">Генерируемое содержимое</h3>
+<ul>
+    <li class="person_content"><p>content [data-mydata="" + attr(..)]</p>
+        <div data-mydata="using content: attr(data-mydata=)" title="using content:attr(title)">hover me!</div>
+        <div data-mydata="using data-mydata=" title="using attr(title)"></div>
+    </li>
+    <li class="content-url"><p>:before(after){content: url("http:\\")}</p>
+        <div>qwerty</div>
+    </li>
+    <li class="counter"><p>Pagination CSS Counter</p>
+        <section>
+            <h2>Jump to page:</h2>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </section>
+    </li>
+    <li class="multicounter">
+        <p>Overlapping CSS Counters</p>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section>
+            <span>
+                Чтобы обнулить счетчик содержимого в каждой секции <br/>
+                нужно прописать в css-свойствах section <code>counter-reset:boxes</code>
+            </span>
+        </section>
+    </li>
+    <li class="totalselected">
+        <p>Total Selected</p>
+        <table>
+            <caption>Selection CSS Counter</caption>
+            <thead>
+            <tr>
+                <th colspan="3">Select characters:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" id="a"><label for="a">Relm</label></td>
+                <td><input type="checkbox" id="b"><label for="b">Mog</label></td>
+                <td><input type="checkbox" id="c"><label for="c">Celes</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="d"><label for="d">Edgar</label></td>
+                <td><input type="checkbox" id="e"><label for="e">Gau</label></td>
+                <td><input type="checkbox" id="f"><label for="f">Terra</label></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3"><span>Total selected:</span></td>
+            </tr>
+            </tfoot>
+        </table>
+    </li>
+    <li class="countergame">
+        <p>CSS Counter Game</p>
+        <table>
+            <caption>Selection CSS Counter</caption>
+            <thead>
+            <tr>
+                <th colspan="3">Pick numbers to get up to 72:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" id="a1"><label for="a1">64</label></td>
+                <td><input type="checkbox" id="b2"><label for="b2">16</label></td>
+                <td><input type="checkbox" id="c3"><label for="c3">-32</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="d4"><label for="d4">128</label></td>
+                <td><input type="checkbox" id="e5"><label for="e5">4</label></td>
+                <td><input type="checkbox" id="f6"><label for="f6">-8</label></td>
+                <td><span id="result"></span></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+            </tfoot>
+        </table>
+    </li>
+</ul>
+<h3 id="layouts">Layouts - раскладка, верстка, макетирование, расположение, компоновка</h3>
+<ul>
+    <li class="inlineblock"><p>inline-block</p>
+        <div class="pricelist_container_left">
+            <div class="left">Левая колонка</div>
+            <div class="center">
+                Средняя колонка <br/>
+                более высокая <br/>
+                занимает 3 строки
+            </div>
+            <div class="right">Правая колонка</div>
+        </div>
+    </li>
+    <li class="float"><p>float</p>
+        <div class="pricelist_container_left">
+            <div class="left">
+                Левая колонка <br/> float-left <br/> margin left
+            </div>
+            <div class="center">
+                Средняя колонка <br/>
+                более высокая <br/>
+                float-left
+            </div>
+            <div class="right">
+                Правая колонка <br/> float-left <br/> margin right
+            </div>
+        </div>
+    </li>
+    <li class="absolute"><p>absolute</p>
+        <div class="pricelist_container_left">
+            <div class="left">
+                Левая колонка является position:absolute, top:0, left:0
+            </div>
+            <div class="center">
+                Средняя колонка заняла всё пространство родительского блока, <br/>
+                так как является статичной(position:static). Имеет border:dashed black. <br/>
+                задействован padding(left и right), чтобы содержимое не затрагивало соседние элементы.
+                min-height для случая, если контента будет очень мало, либо же не будет вовсе,
+                иначе родитель потеряет высоту.
+            </div>
+            <div class="right">
+                Правая колонка position:absolute, top:0, right:0
+            </div>
+        </div>
+    </li>
+    <li class="absolute2"><p>one more absolute</p>
+        <div class="pricelist_container_left">
+            <div class="left">Левая колонка</div>
+            <div class="center">
+                Средняя колонка <br/>
+                более высокая <br/>
+                занимает 3 строки
+            </div>
+            <div class="right">Правая колонка</div>
+        </div>
+    </li>
+</ul>
+<h3 id="flex">Flex</h3>
+<div class="flex"><p>flex</p>
+    <div class="pricelist_container_left">
+        <div class="col left">
+            <h2>Fluid</h2>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eum eveniet fuga ipsa, ipsum iste labore laboriosam laudantium nemo nobis, odit perferendis perspiciatis placeat quae quia quidem saepe suscipit velit?</div>
+        </div>
+        <div class=" col center">
+            <h2>fixed</h2>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eveniet excepturi impedit iusto laborum magnam magni quam voluptates! Deserunt, dicta impedit incidunt iusto laborum laudantium libero magnam minima temporibus vero.</div>
+        </div>
+        <div class="col right">
+            <h2>Fluid</h2>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque cum cupiditate delectus dolorum ducimus error illo iste magni nobis non nulla possimus quibusdam rerum, saepe vel voluptate voluptatem voluptatibus.</div>
+        </div>
+    </div>
+    <div class="testcontainer">
+        <img src="../images/dat1.jpg" alt="">
+    </div>
+</div>
+<h3 id="m-query">Media-query</h3>
+<span>Используется при надобности изменять контент взависимости от уловий, например, разрешение монитора, телефона.</span>
+<ul class="mquery">
+    <li>
+        <p>Варианты подключений</p>
+        <ul>
+            <li><code>< link rel="stylesheet" <mark>media="(max-width: 800px)"</mark> href="..." /></code> в <code>< head ></code> html файла</li>
+            <li>
+                <div>В <code>< style ></code> в <code>< head ></code> файла html.</div>
+                <span class="example">
+                    <mark>@media (max-width: 800px) {</mark>
+                    <br/>
+                    div {display: none;}
+                    <br/>
+                    <mark>}</mark>
+                </span>
+                <div class="example1">Пример @media. <span>этот текст станет красным при сужении страницы до определенного момента.</span></div>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+</body>
+</html>

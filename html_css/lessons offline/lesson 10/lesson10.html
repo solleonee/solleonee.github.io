@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson10</title>
+    <style>
+        .green {color: green;}
+        .red {color: red;}
+        .orange {color: orange;}
+    </style>
+</head>
+<body>
+
+<ul class="lesson_plan"><u>План занятия:</u>
+    <li>Как работает интернет</li>
+    <li>HTTP</li>
+    <li>Типы запросов</li>
+    <li>Заголовки</li>
+    <li>Кеширование</li>
+    <li>HTTPS</li>
+</ul>
+
+<h1 class="lesson_caption">Как работает интернет</h1>
+    <img src="../images/Inet-working_scheme.jpg" alt="" id="inet_pic">
+<p>
+    DNS - Domain Name Servers <br>
+    HTTP - Hyper Text Transfer Protocol <br>
+    URI - Uniform Resource Identifyer <br>
+    URL - Uniform Resource Locator
+</p>
+
+<h1 class="lesson_caption">HTTP</h1>
+<h3>Структура URI</h3>
+<p>
+    схема :// логин:пароль @ хост:порт/URL-путь ? get-параметры # якорь <br/>
+    <span class="green">
+        http <em class="red">://</em> user:password <em class="red">@</em> ya.ru/somedir/somefile.txt <em class="red">?</em> text=http&from=asd <em class="red">#</em> someanchor
+    </span>
+</p>
+
+<ol>Структура протокола:
+    <li>Стартовая строка (Starting line) - метод(<em class="green">GET</em>) URI(<em class="green">/foo/bar</em>) HTTP/версия(<em class="green">HTTP/1.1</em>)</li>
+    <li>Заголовки (Headers)</li>
+    <li>Тело сообщения (Message body)</li>
+</ol>
+
+<h3>Методы запроса: GET и POST</h3>
+<p>
+    <span class="orange">GET</span> <span class="red">/index.html</span>?<em class="green">param=value&a=1&b=2&c=3</em> HTTP/1.1
+    <br/>
+    Заголовки
+    <br/><br/>
+    <span class="orange">POST</span> <span class="red">/index.html</span> HTTP/1.1
+    <br/>
+    Заголовки
+    <br/>
+    Тело сообщения <em class="green">param=value&a=1&b=2&c=3</em>
+</p>
+
+<h3>Коды состояния HTTP</h3>
+<ul>
+    <li>Информационные ответы(1хх)
+        <ul>
+            <li>100 Continue</li>
+            <li>101 Switching protocols</li>
+            <li>102 Progressing</li>
+        </ul>
+    </li>
+    <li class="green">Ответа успеха(2xx)
+        <ul>
+            <li>200 OK</li>
+            <li>201 Created</li>
+            <li>202 Accepted</li>
+        </ul>
+    </li>
+    <li class="orange">Ответы перенаправления(3xx)
+        <ul>
+            <li>301 Moved Permanently</li>
+            <li>302 Moved Temporarily</li>
+            <li>304 Not Modified</li>
+        </ul>
+
+    </li>
+    <li class="red">Ошибки клиента(4xx)
+        <ul>
+            <li>400 Bad Request</li>
+            <li>403 Forbidden</li>
+            <li>404 Not Found</li>
+            <li>408 Request Timeout</li>
+        </ul>
+    </li>
+    <li class="red">Ошибки сервера(5xx)
+        <ul>
+            <li>500 Internal Server Error</li>
+            <li>502 Bad Gateway</li>
+            <li>504 Gateway Timeout</li>
+            <li>503 Service Unavailable</li>
+        </ul>
+
+    </li>
+</ul>
+
+<h3>Заголовки HTTP</h3>
+<ul>
+    <li>General Headers</li>
+    <li>Request Headers</li>
+    <li>Response Headers</li>
+    <li>Entity Headers</li>
+</ul>
+
+<h1>Кеширование</h1>
+<ul>
+    <li>Expires: Thu, 28 Feb 2022 21:01:54 GMT</li>
+    <li>Last Modified: -//-//-</li>
+    <li></li>
+</ul>
+
+<h1>Cookie</h1>
+<h3>Аттрибуты cookie</h3>
+<p>
+    Кроме пары имя/значение, cookie может содержать срок действия, путь и доменное имя. <br/><br/>
+    Пример: yandexuid=897097897897897; <span class="red">Expires=Sat, 08 Jan 2022 09:22:23 GMT</span> <span class="green">path=/;</span> <span class="orange">domain=.yandex.ru</span>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

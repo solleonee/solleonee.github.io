@@ -1,0 +1,56 @@
+
+.pagger_container {
+    white-space: nowrap;
+}
+.pagger_container_links {
+    display: inline-block;
+    padding: 0 15px;
+}
+.pagger_container_links a   {
+    display: inline-block;
+    width: 45px;
+
+    margin: 0 10px;
+    font: 13px Impact,sans-serif;
+    text-decoration: none;
+    color: darkorchid;
+    vertical-align: middle;
+}
+.pagger_container_links a:hover {
+    font-size: 16px;
+    text-shadow: 1px -1px 5px darkorchid;
+}
+.before a:before {
+    content:"<< ";
+    font-weight: bold;
+    margin-right: -2px;
+
+}
+.after a::after {
+    content:" >>";
+    font-weight: bold;
+    margin-left: -3px;
+}
+
+
+.pagger_container_form {
+    display: inline-block;
+}
+.pagger_container_form input   {
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 5px 8px;
+    font-family: "Arial Black", sans-serif;
+    font-size: 10px;
+    color: darkorchid;
+}
+.pagger_container_form input:hover {
+    color: white;
+    background-color: darkorchid;
+}
+.pagger_form_dotts {
+    display: inline-block;
+    line-height: 0.9;
+    vertical-align: bottom;
+}

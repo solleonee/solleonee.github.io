@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson8</title>
+    <link rel="stylesheet" href="Lesson8.css">
+</head>
+
+<body>
+
+
+<ul class="lesson_plan"><u>План занятия:</u>
+    <li>Transition</li>
+    <li>Transform</li>
+    <li>Animation</li>
+    <li>3D Transform</li>
+</ul>
+
+<h1 class="lesson_plan__title">TRANSITION</h1>
+<div class="transition_body">
+    <ul class="lesson_plan__list">
+        <li>Transition, Multiple Transitions
+            <p>Запись transition: <br/>
+                <code>transition: transition-property(ex:color) transition-duration(ex:1.2s) transition-timing-function(ex:linear)</code></p>
+            <p>Пример записи в css коде: <br/>
+                <span class="syntaxis_example">transition: backround-color,color,margin 1.5s linear;</span> - если тайминги и функции одинаковы <br/><br>
+                <span class="syntaxis_example">transition: <br>
+                    background-color 1s linear,<br>
+                    color 1.7s ease-out,<br>
+                    margin 1.5s step-end;</span> - если все разное.
+            </p>
+
+            <div class="transition func_linear">example<br>(linear)</div>
+        </li>
+        <li>Timing function
+            <p>Разновидности: <br/>
+                <code>linear</code> - дефолтный вариант. Действие происходит равномерно во всех стадиях. <br/>
+                <code>ease</code> - в отличие от linear получает эффект "волны" <br/>
+                <code>ease-in</code> - в начале медленно, затем быстро <br/>
+                <code>ease-out</code> - сначала медленно, в середине быстро, в конце медленно <br/>
+                <code>step-start</code> - выдает сразу окончательный вариант. <br/>
+                <code>step-end</code> - установленные тайминги считаются в родной позиции, по окончании показывается конечный результат. <br/>
+                <code>step-end</code> - установленные тайминги считаются в родной позиции, по окончании показывается конечный результат. <br/>
+                <code>cubic-bezier(x1,y1,x2,y2)</code> - работает очень сложно, но КРАСИВО! :) <br/>
+            </p>
+
+            <div class="transition func_ease">ease</div>
+            <div class="transition func_ease_in">ease-in</div>
+            <div class="transition func_ease_out">ease-out</div>
+            <div class="transition func_step_start">step-start</div>
+            <div class="transition func_step_end">step-end</div>
+            <div class="transition func_cubic_bezier">cubic-bezier</div>
+
+        </li>
+
+
+        <li>Transition Delay
+            <p>Пример записи(2 варианта): <br/>
+                <code>transition-delay: 1s;</code> - если нужно применить к нескольким свойствам(например margin,width,height и тд), то прописываем очередно по очереди(transition-delay: 1s, 1.5s, 2s;). <br/>
+                <br/>
+                <code>transition-delay: margin 1s linear 0.5s, padding 1s ease 1.1s;</code> - последнее число в секундах = transition-delay.
+            </p>
+
+            <div class="transition delay">transition-delay(0.7sec) <br/>
+                (timing-function:linear)
+            </div>
+
+        </li>
+    </ul>
+</div>
+
+<h1 class="lesson_plan__title">TRANSFORM</h1>
+<div class="transform_body">
+    <ul class="lesson_plan__list">
+        <li>transform
+            <p>Пример записи transform: <br><br>
+                <span class="syntaxis_example">transform:<br>
+                    translate(x[горизонталь],y[вертикаль]);<br>
+                    scale(x,y);<br>
+                    rotate(#deg) <br>
+                    skew(Xdeg,Ydeg)
+                </span>
+            </p>
+            <p>Разновидности transform: <br>
+                <code>translate</code> - <u>сдвигаем</u> блок по горизонтали и вертикали <br>
+                <code>scale</code> - <u>изменяем размер</u> относительно текущего (от 0 до 1, где 1=100%) <br>
+                <code>rotate</code> - <u>переворачиваем</u> в градусах по часовой стрелке, с отрицательным значением (-120deg) против часовой стрелки. <br>
+                <code>skew</code> - <u>искажаем</u> в градусах по горизонтали и вертикали, могут быть отрицательные значения
+            </p>
+            <div class="transform_box">AAA</div>
+        </li>
+
+        <li>transform-origin
+            <p>
+                Позволяет изменять центр оси, по которой делается <code>transform</code>,задается в процентах <br>
+                По дефолту, центр оси находится на 50%ширины и 50%высоты (transform-origin:50% 50%).<br>
+                Если по ширине(х)и высоте(у) задано 0% - то центр оси будет в левом верхнем углу, если (x100% y100%) - ось в правом нижнем углу.
+                <br><br>
+                Пример записи: <br>
+                <span class="syntaxis_example">transform-origin:50% 50%;</span>
+            </p>
+            <div class="transform_box origin">Hello</div>
+        </li>
+        <li>2D</li>
+    </ul>
+</div>
+
+<h1 class="lesson_plan__title">ANIMATION</h1>
+<div class="animation_body">
+        CSS запись задания анимации:
+        <div class="syntaxis_example">
+            @keyframes [name] { <br>
+            from {margin:0;}<br>
+            20% {margin; 0;}<br>
+            40% {margin; 0;}<br>
+            60% {margin; 0;}<br>
+            to {margin:0;}<br>
+            }
+        </div>
+    CSS запись подключения анимации:
+    <div class="syntaxis_example">
+        div {
+        animation: 0,56s my-custom-name;
+        }
+    </div>
+
+    <ul class="lesson_plan__list">
+        <li>animation
+            <p>
+                Использование анимации делится на 2 части: <br>
+                1. Создание последовательности и имени анимации с помощью правила <code>@keyframes</code>. <br>
+                2. Непосредственное использование и параметризация этой анимации.
+            </p>
+            <div class="animation_box animated">animated</div>
+        </li>
+        <li>animation properties
+            <ul style="font: 400 normal 17px serif; color: black;">
+                <li><code>animation-name:my-custom-name;</code> - вызов анимации по имени</li>
+                <li><code>animation-duration:1.65s;</code> - продолжительность анимации</li>
+                <li><code>animation-interaction-count:3;</code> - количество интераций, бесконечно = <code>infinite</code></li>
+                <li><code>animation-direction:reverse|alternate</code> - возможность анимировать в обратную сторону</li>
+            </ul>
+        </li>
+        <li>animation and transition
+            <p>Чтобы плавно вернуть исходную позицию обьекта после анимации, нужно просто задать анимированному свойству transition у самого обьекта.
+                <br><br>
+                Ниже приведен пример, где у "animated box" был дописан <code>transition:width 0.75s linear;</code>
+            </p>
+            <input type="checkbox" name="animated" id="anime_chex">
+            <label for="anime_chex">click to animate!</label>
+            <div class="animation_box">animated box</div>
+        </li>
+
+        <li>multi animations <br>
+            <input type="checkbox" name="animated" id="anime_chex2">
+            <label for="anime_chex2">click to animate!</label>
+            <div class="animation_box">multi-animated box</div>
+        </li>
+        <li>animation pause  &  animation end
+            <p>
+                <code>animation-play-state: paused;</code>
+            </p>
+            <input type="checkbox" name="animated" id="anime_chex3">
+            <label for="anime_chex3">click to animate!</label>
+
+            <input type="checkbox" name="animated" id="anime_pause">
+            <label for="anime_pause">pause animation!</label>
+
+            <input type="checkbox" name="animated" id="anime_stop">
+            <label for="anime_stop">stop at the end!</label>
+
+            <div class="animation_box">multi-animated box</div>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

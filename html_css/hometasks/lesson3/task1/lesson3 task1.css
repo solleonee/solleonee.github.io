@@ -1,0 +1,83 @@
+h1  {
+    color: orangered;
+    font-size: 50px;
+    text-align: right;
+}
+p   {
+    font-size: 19px;
+    font-weight: bold;
+}
+p:first-letter   {
+    font-size: 25px;
+    color: red;
+}
+p em    {
+    color: white;
+    background-color: green;
+}
+
+
+
+
+
+header.ogorod {
+    font-weight: bold;
+    font-size: 25px;
+    color: orange;
+}
+header.sklad {
+    font-weight: bold;
+    font-size: 25px;
+    color: blue;
+}
+ul.ogorod {
+    font-weight: bold;
+}
+ol.ogorod.frukti {
+    font-weight: normal;
+    color: grey;
+}
+ol.ogorod.ovoshi {
+    font-weight: normal;
+    color: red;
+}
+ul.sklad {
+    font-weight: bold;
+}
+ol.sklad.frukti {
+    font-weight: normal;
+    color: green;
+}
+ol.sklad.ovoshi {
+    font-weight: normal;
+    color: red;
+}
+
+
+
+
+
+table {
+    border: solid 2px;
+    border-color: grey black black grey;
+    width: 400px;
+}
+tbody th,thead th {
+    border: solid 1px;
+    border-color: black grey grey black;
+}
+thead   {
+    font-style: italic;
+}
+thead tr:nth-child(2)  {
+    color: red;
+}
+tbody tr th:first-child  {
+    color: orange;
+    text-align: left;
+}
+tbody tr th:first-child ~ th {
+    background-color: green;
+    color: white;
+}
+

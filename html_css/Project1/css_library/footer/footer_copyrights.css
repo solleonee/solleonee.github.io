@@ -1,0 +1,14 @@
+
+.copyrights {
+    padding: 20px 0;
+    text-align: center;
+    background: dodgerblue;
+    color: white;
+    font: 13px Arial, sans-serif;
+}
+
+.creator {
+     font: bold small-caps 15px "Segoe Print", sans-serif;
+     margin: 0 10px;
+
+ }

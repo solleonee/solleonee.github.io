@@ -1,0 +1,380 @@
+body {z-index: 1}
+nav {
+    width: 210px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    background-color: transparent;
+    z-index: 2;
+}
+nav ul {visibility: hidden;}
+nav a {
+    text-decoration: none;
+}
+nav:hover {
+    background: lightgoldenrodyellow;
+    border: solid blue;
+    border-width: 0 0 2px 2px;
+}
+nav:hover ul {visibility: visible;}
+nav li:hover {
+    font-size: 14px;
+    text-decoration: underline;
+    margin-bottom: -2px;
+}
+nav h1 {
+    text-align: center;
+}
+h3 {
+    border: 1px dashed grey;
+    background-color: #f2f2de;
+    padding: 20px 40px;
+}
+p  {
+    color: blue;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+table.ul {
+    border-collapse: collapse;
+    display: inline-block;
+}
+.ul caption {
+    font-size: 35px;
+    color: orange;
+}
+.ul thead {
+    background-color: darkgray;
+}
+.ul tbody {
+    background-color: lavenderblush;
+}
+.ul th,
+.ul td
+{
+    border: 1px solid grey;
+    padding: 5px 20px;
+}
+table.ol {
+    border-collapse: collapse;
+    display: inline-block;
+}
+.ol colgroup col:first-child {
+    background-color: azure;
+}
+
+.ol colgroup col:nth-child(2) {
+    background-color: #f2f2de;
+}
+.ol caption {
+    font-size: 35px;
+    color: orange;
+}
+.ol thead {
+    background-color: darkgray;
+}
+.ol tbody {
+}
+.ol th,
+.ol td
+{
+    border: 1px solid grey;
+    padding: 5px 20px;
+}
+.lists>div {margin-right: 30px;}
+.stylepos {display: inline-block;}
+.stylepos ul {
+    list-style-position: inside;
+
+}
+.styleimg {
+    display: inline-block;
+}
+.styleimg ul {
+    list-style-image: url("../images/galka.jpg");
+}
+.listmarker ol {
+    color: red;
+}
+.listmarker ol ul,
+.listmarker ol span {
+    color: black;
+}
+.person_content div {
+    display: inline-block;
+    position: relative;
+    margin-right: 30px
+}
+.person_content div:first-of-type:hover:before {
+    content: attr(title);
+    position: absolute;
+    top: -30px;
+    background-color: #f2f2de;
+    border: 1px solid red;
+    font-size: 11px;
+    padding: 2px 3px;
+
+}
+.person_content div:nth-of-type(2):before {
+    content: attr(data-mydata);
+}
+.content-url div {background-color: gainsboro;}
+.content-url div:before {
+    content: url("../images/galka.jpg");
+}
+.counter section {counter-reset: pages;}
+.counter h2 {
+    margin-top: 0;
+    display: inline-block;
+}
+.counter a {counter-increment: pages;}
+.counter a:before {content: counter(pages)}
+
+.multicounter {counter-reset: sections boxes;}
+.multicounter section {
+    counter-increment: sections;
+    /*counter-reset: boxes;*/
+    display: inline-block;
+    margin-right: 20px;}
+.multicounter section::before {content: "Section " counter(sections)}
+.multicounter div {
+    counter-increment: boxes;
+}
+.multicounter div::before {content: counter(boxes, upper-roman)}
+
+.totalselected table {
+    border: 1px solid black;
+    padding: 5px;
+}
+.totalselected thead {
+    text-align: center;
+}
+.totalselected tbody {
+    counter-reset: characters;
+}
+.totalselected input {
+    display: none;
+}
+.totalselected label {
+    display: block;
+    border: 1px solid grey;
+    padding: 5px;
+    text-align: center;
+}
+.totalselected input:checked + label {
+    background-color: bisque;
+    color: blue;
+    counter-increment: characters;
+}
+.totalselected tfoot {
+    font-weight: bold;
+    text-align: center;
+}
+.totalselected tfoot span::after {
+    content: counter(characters);
+}
+
+.countergame table {
+    border: 1px solid black;
+    padding: 5px;
+}
+.countergame thead {
+    text-align: center;
+}
+.countergame tbody {
+    counter-reset: sum;
+    /*counter-reset: sum 41;*/
+    /*начинает выводить с указанной цифры */
+}
+.countergame input {
+    display: none;
+}
+.countergame label {
+    display: block;
+    border: 1px solid grey;
+    padding: 5px;
+    text-align: center;
+}
+.countergame input:checked + label {
+    background-color: bisque;
+    color: blue;
+}
+.countergame #a1:checked+label {counter-increment: sum 64;}
+.countergame #b2:checked+label {counter-increment: sum 16;}
+.countergame #c3:checked+label {counter-increment: sum -32;}
+.countergame #d4:checked+label {counter-increment: sum 128;}
+.countergame #e5:checked+label {counter-increment: sum 4;}
+.countergame #f6:checked+label {counter-increment: sum -8;}
+
+.countergame span#result::after {
+    content: counter(sum);
+    font-weight: bold;
+    text-align: center;
+}
+#a1:checked+label ~ #b2:checked+label ~ #c3:not(checked)+label ~ #d4:not(checked)+label ~ #e5:not(checked)+label ~ #f6:checked+label ~ span#result::after {content: 'hooray';}
+.countergame tfoot {
+    font-weight: bold;
+    text-align: center;
+}
+
+.inlineblock .pricelist_container_left {
+    min-width: 700px;
+    border: 5px solid blue;
+    white-space: nowrap;
+}
+.inlineblock .left, .inlineblock .center, .inlineblock .right {
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+    text-align: center;
+}
+.inlineblock .left {
+    width: 16%;
+    background: lightcyan;
+    margin-left: 2%;
+    border: 3px solid yellow;
+}
+.inlineblock .left:hover {font-size: 110%;}
+.inlineblock .center {
+    width: 56%;
+    background: lightpink;
+    border: 3px dashed black;
+}
+.inlineblock .right {
+    width: 24%;
+    background: lightgreen;
+    margin-right: 2%;
+    border: 3px solid lightblue;
+}
+
+.float .pricelist_container_left {
+    min-width: 700px;
+    background: indianred;
+    overflow: hidden;
+    border: 1px solid blue;
+}
+.float .left, .float .center, .float .right {
+    float: left;
+    box-sizing: border-box;
+}
+.float .left {
+    border: 3px solid yellow;
+    margin-left: 2%;
+    width: 23%;
+}
+.float .left:hover {font-size: 110%;}
+.float .center {
+    width: 50%;
+    border: 3px dashed black;
+}
+.float .right {
+    border: 3px solid lightblue;
+    margin-right: 2%;
+    width: 23%;
+}
+
+.absolute .pricelist_container_left {
+    min-width: 900px;
+    background: indianred;
+    position: relative;
+    border: 5px solid green;
+}
+.absolute .left, .absolute .center, .absolute .right {
+    box-sizing: border-box;
+}
+.absolute .left {
+    border: 3px solid yellow;
+    margin-left: 2%;
+    width: 23%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.absolute .center {
+    padding: 0 25% 0 25%;
+    border: 3px dashed black;
+    min-height: 50px;
+}
+.absolute .right {
+    border: 3px solid lightblue;
+    margin-right: 2%;
+    width: 23%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.absolute2 .pricelist_container_left {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid black;
+    position: relative;
+}
+.absolute2 .left {
+    background: lightcyan;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 75%;
+}
+.absolute2 .center {
+    background: lightpink;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 25%;
+    bottom: 50%;
+}
+.absolute2 .right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 25%;
+    background: lightgreen;
+}
+
+.flex .pricelist_container_left {
+    min-width: 700px;
+    border: 1px solid black;
+    display: flex;
+    display: -webkit-flex;
+}
+.flex .col {padding: 30px 20px;}
+.flex .col:nth-child(odd) {background: grey;}
+
+.flex .center {width: 200px;  background: red;}
+.flex .left {flex: 1;}
+.flex .right {flex: 3;}
+
+.testcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 500px;
+    margin: 30px 0 0 0;
+
+    border: 5px solid blue;
+    background: lightpink;
+}
+.mquery code {
+    font-size: 15px;
+    color: blueviolet;
+}
+.mquery .example {
+    display: inline-block;
+    border: 1px solid blue;
+    background: lightcyan;
+}
+.mquery .example1 {color: green;}
+@media all and (max-width: 800px){
+    .mquery .example1 span {
+        color: red;
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson7</title>
+    <link rel="stylesheet" href="Lesson7.css">
+</head>
+<body>
+
+<nav>
+    <ul class="nav_list">
+        <h1>Навигация</h1>
+        <li><a href="#list__type_of_count">Значения и единицы измерения</a>
+            <ul>
+                <li>Числа</li>
+                <li>Процентные значения</li>
+                <li>Цвет</li>
+                <li>Измерение длины em/rem/ex</li>
+                <li>vh, vw, vmin, vmax</li>
+                <li>calc()</li>
+            </ul>
+        </li>
+        <li><a href="#list__font">Генерируемое<br/> содержимое</a></li>
+        <li><a href="#list__text_setting">Лейауты</a></li>
+    </ul>
+</nav>
+
+<h2 id="list__type_of_count">Значения и единицы измерения</h2>
+<ul>
+    <li><span class="list_item__caption">Числа</span>
+        <ul>
+            <li><code>opacity: from 0 to 1</code><br/>
+                прозрачность <mark>всего</mark> элемента, включая содержимое!
+                <div class="box example_opacity">some text</div>
+            </li>
+            <li><span><code>lineheight: from 0 to 999</code><br/> высота линии относительно высоты текста</span>
+                <div class="box example_lineheight">some text</div>
+            </li>
+        </ul>
+    </li>
+    <li><span class="list_item__caption">Процентные значения</span>
+        <p>Ширина желтого бокса указана в процентах,<br/>
+            которая высчитывается относительно своего родителя - красного контейнера. <br/>
+            Картинка на бекграунде растянута на 50% по верт и по горизонт. <br/><br/>
+            <p style="border: 10px solid blue">
+            Сокращенная запись бекграунда(через пробелы): <br/>
+            <code>background: color url 50% 50%(size) repeat</code>
+        </p>
+
+        <div class="container_percentage">
+        <div class="box_percent">1</div>
+        </div>
+    </li>
+    <li><span class="list_item__caption">Цвет</span>
+        <div>
+            <div class="box color rgb">RGB</div>
+            <div class="box color rgba">RGBA</div>
+            <div class="box color hsl">HSL</div>
+            <div class="box color hsla">HSLA</div>
+        </div>
+    </li>
+    <li><span class="list_item__caption">Измерение длины em/rem/ex</span>
+        <div class="font_size__body">
+            1em = 100% родителя; <br>
+            1ex = 1/2em или высоте "x" <br/>
+            1rem = размер шрифта body
+            <div class="font_size__container">
+                <span class="px">
+                    <mark>font_size__px</mark> <br/>
+                    если не задан свой размер в px, <br/>
+                    то наследует от родителя(grey_container)
+                </span>
+                <span class="em">
+                    <mark>font_size__em</mark> <br/>
+                    значение 1.1em
+                </span>
+                <span class="ex">
+                    <mark>font_size__ex</mark> <br/>
+                    эквивалент высоты буквы "x"
+                </span>
+                <span class="rem">
+                     <mark>font_size__rem</mark> <br/>
+                    сбрасывает font_size до уровня < body >
+                </span>
+            </div>
+        </div>
+    </li>
+    <li><span class="list_item__caption">calc()</span>
+        <div class="box calc">
+            <code>Ex.= width:calc(100% - 500px);</code>
+        </div>
+    </li>
+    <li>
+        <span class="list_item__caption">vh, vw, vmin, vmax</span>
+        <p>
+            <mark>1vw = 1% от ширины окна.</mark><br>
+            <mark>1vh = 1% от высоты окна.</mark><br>
+            <mark>1vmin = 1vw или 1vh.</mark> выбирает то, которое меньше<br>
+            <mark>1vmax = 1vw или 1vh.</mark> выбирает то, которое больше
+        </p>
+    </li>
+</ul>
+<hr/>
+
+<h2 id="list__font">Шрифт</h2>
+<ul>
+    <li><span class="list_item__caption">font-family</span>
+        <p>Пример: <code>font-family: Helvetica, sans-serif;</code></p>
+    </li>
+    <li><span class="list_item__caption">font-weight</span>
+        <p>Значения: 100,200(lighter),300,400(normal),500,600,700(bold),800,900</p>
+    </li>
+    <li><span class="list_item__caption">font-size</span>
+        <p>помимо значений и ед измерения, можно задать <code>smaller</code> и <code>larger</code></p>
+    </li>
+    <li><span class="list_item__caption">font-variant & text-transform & font-style</span>
+        <ul class="font_settings">
+            <li class="small_caps"><code>font-variant:small-caps;</code>
+                Dolor sit amet, consectetur adipisicing elit. Ab accusamus adipisci aliquam aliquid animi architecto, cum cumque est explicabo fugit laboriosam maxime non perspiciatis quae quasi quisquam sint totam, voluptates?
+            </li>
+            <li class="uppercase"><code>text-transform: uppercase;</code>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet autem deleniti, eum illo illum impedit inventore laudantium magnam necessitatibus nobis nostrum numquam quaerat quo ratione repudiandae saepe voluptas!
+            </li>
+            <li class="lowercase"><code>text-transform: lowercase;</code>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet autem deleniti, eum illo illum impedit inventore laudantium magnam necessitatibus nobis nostrum numquam quaerat quo ratione repudiandae saepe voluptas!
+            </li>
+            <li class="capitalize"><code>text-transform: capitalize;</code>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet autem deleniti, eum illo illum impedit inventore laudantium magnam necessitatibus nobis nostrum numquam quaerat quo ratione repudiandae saepe voluptas!
+            </li>
+            <li class="italic"><code>font-style: italic;</code>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias amet autem deleniti, eum illo illum impedit inventore laudantium magnam necessitatibus nobis nostrum numquam quaerat quo ratione repudiandae saepe voluptas!
+            </li>
+
+        </ul>
+    </li>
+    <li><span class="list_item__caption">Свойства font</span>
+        <ol class="font_writing">font:
+    <li><code>font-weight</code></li>
+    <li><code>font-style</code></li>
+    <li><code>font-variant</code></li>
+    <li><code>font-size/line-height</code></li>
+    <li><code>font-family</code></li>
+    </ol>
+        <p style="border: 10px solid blue">Пример записи значений:
+            <mark class="font_writing_example">font: bold italic small-caps 15px/0.5 Arial, sans-serif </mark>
+        </p>
+    </li>
+    <li><span class="list_item__caption">Добавление внешнего шрифта</span>
+        <ol>
+            <li>В css-файле или < style >: <code>@font-face {src: url(http://..)}</code></li>
+            <li>В html файл с помощью link в head(как файл стилей css): <br/>
+                <code>link rel="stylesheet" href="http://..." type="text/css"</code>
+            </li>
+            <li>С помощью @import</li>
+        </ol>
+    </li>
+
+</ul>
+<hr/>
+
+
+<h2 id="list__text_setting">Свойства текста</h2>
+<ul>
+    <li><span class="list_item__caption">Отступы</span>
+        <ul>
+            <li><code>text_indent: 3em;</code>
+                <p class="text_indent_plus">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eligendi expedita facere fugit ipsa
+                    laborum magni minima modi nam, non nostrum obcaecati quaerat quam quasi quisquam similique, soluta
+                    voluptas. Esse?</p>
+            </li>
+            <li><code>text_indent: -0.5em;</code>
+                <p class="text_indent_minus">
+                    << Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, aliquam architecto assumenda blanditiis debitis doloremque doloribus illum ipsum iste iusto laboriosam magni minima nesciunt possimus quis ratione, tempore ullam? >>
+                </p>
+            </li>
+        </ul>
+    </li>
+    <li><span class="list_item__caption">Горизонтальные выравнивания(работaет с inline-block)</span>
+        <p class="text_justify"><code>text-align:justify;</code>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut cumque dolor eaque expedita id minus molestiae odio quae repellendus reprehenderit rerum, saepe tempore. Natus neque sed sunt voluptates? Dolorum!
+        </p>
+    </li>
+    <li><span class="list_item__caption">Вертикальные выравнивания</span>
+            <p><code>line-height & vertical-align</code></p>
+    </li>
+    <li><span class="list_item__caption">Расстояние между буквами и словами</span>
+
+        <p class="text_spacing"><code>letter-spacing & word-spacing</code> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam delectus dicta dignissimos dolorem enim
+            eos expedita fuga hic illum, ipsa ipsum iusto molestias necessitatibus nemo neque sint temporibus vel!</p>
+    </li>
+    <li><span class="list_item__caption"></span>
+    </li>
+    <li><span class="list_item__caption">Оформление текста</span>
+        <p class="text_decoration">
+            <code style="text-decoration: none; display: inline-block;">text_decoration: underline overline line-through</code>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et minus molestiae numquam quaerat quisquam!Accusamus aperiam blanditiis, consequatur dolore, ex iusto laboriosam minima mollitia perferendis quae quirepudiandae saepe, unde.</p>
+
+    </li>
+    <li><span class="list_item__caption">Затемнение текста <code></code></span>
+        <div class="text_shadow__container">
+            <h1><span>text-shadow: left top blur color(rgba);</span></h1>
+            <p><span class="text_shadow__transparent">Прозрачный текст</span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque cum dicta eaque eius, enim errorhic id in iste iusto, magnam modi nesciunt odio praesentium quam quia repudiandae suscipit?</p>
+        </div>
+    </li>
+    <li><span class="list_item__caption">Multi-column</span>
+        <div class="multi_column">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores aut cupiditate debitis distinctio doloremque dolores ea fugiat ipsum laudantium minus molestias nisi provident, ratione tempora temporibus unde voluptate voluptatibus.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores aut cupiditate debitis distinctio doloremque dolores ea fugiat ipsum laudantium minus molestias nisi provident, ratione tempora temporibus unde voluptate voluptatibus.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores aut cupiditate debitis distinctio doloremque dolores ea fugiat ipsum laudantium minus molestias nisi provident, ratione tempora temporibus unde voluptate voluptatibus.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores aut cupiditate debitis distinctio doloremque dolores ea fugiat ipsum laudantium minus molestias nisi provident, ratione tempora temporibus unde voluptate voluptatibus.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores aut cupiditate debitis distinctio doloremque dolores ea fugiat ipsum laudantium minus molestias nisi provident, ratione tempora temporibus unde voluptate voluptatibus.
+        </div>
+
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+</body>
+</html>
