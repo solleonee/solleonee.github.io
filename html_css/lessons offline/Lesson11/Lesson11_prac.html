@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User profile</title>
+    <style>
+        .user_profile {
+            position: relative;
+            font: 400 13px "Verdana", sans-serif;
+        }
+        .user_photo {
+            position: absolute;
+            left: 20px;
+            padding: 2px;
+            border: 1px solid whitesmoke;
+        }
+        .user_profile__action_list {
+            position: absolute;
+            top: 220px;
+            left: 30px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .user_profile__action_list li:before {
+            content: ">";
+            color: grey;
+            font-size: 8px;
+            margin-right: 10px;
+        }
+        .user_profile__content_wrap {
+            width: auto;
+            margin: 0 0 0 240px;
+        }
+        .user_profile__name {
+            font: bold 20px Arial, sans-serif;
+        }
+        .user_profile__nickname {
+            color: grey;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .user_profile__nickname:before {
+            content: "@";
+        }
+        .about_caption,
+        .interests_caption
+        {
+            display: block;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="user_profile">
+    <img src="http://lorempixel.com/g/200/200/" alt="photo" class="user_photo">
+    <ul class="user_profile__action_list">
+        <li><a href="">Email</a></li>
+        <li><a href="">Message</a></li>
+        <li><a href="">Add to contact</a></li>
+        <li><a href="">Report</a></li>
+    </ul>
+    <div class="user_profile__content_wrap">
+        <h1 class="user_profile__name">Johny Deep</h1>
+        <h4 class="user_profile__nickname">jdeep</h4>
+        <p class="user_profile__content">
+            <span class="about_caption">About:</span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto eius hic impedit obcaecati vel voluptatibus? Facere harum mollitia nam nemo nobis perspiciatis praesentium, sed tempore. Modi nemo sapiente temporibus?
+        </p>
+        <p class="user_profile__content">
+            <span class="interests_caption">Interests:</span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor fugiat magni maxime, quisquam reiciendis repellendus sed sit tenetur, ullam vel voluptatem. Consequatur pariatur quia quod similique temporibus voluptatum!
+        </p>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
