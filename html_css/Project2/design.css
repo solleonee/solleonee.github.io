@@ -113,14 +113,14 @@ body {
 
 
 .pics_selected__container {
-    visibility: hidden;
+    visibility: visible;
 
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.9);
 }
 .pics_selected__box {
     position: absolute;
@@ -131,8 +131,8 @@ body {
     margin: auto;
 
 
-    max-width: 80%;
-    max-height: 80%;
+    width: 1000px;
+    height: 600px;
 }
 .pics_selected__box img {
     width: 100%;
@@ -159,8 +159,8 @@ body {
     background: white;
     color: black;
     transition:
-            background 0.4s ease-out,
-            color 0.6s ease;
+            background 0.4s linear,
+            color 1s ease;
 }
 
 
