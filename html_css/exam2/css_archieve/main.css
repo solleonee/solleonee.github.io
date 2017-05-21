@@ -123,10 +123,11 @@ header {
 .apply_button::after {
     position: absolute;
     top: 0;
+    bottom: 0;
     right: -11px;
     content: "";
     width: 30px;
-    height: 25px;
+    height: auto;
     background: #ffc552;
     border-radius: 100%;
     background: linear-gradient(to bottom, #f1e767 0%,#feb645 100%);
