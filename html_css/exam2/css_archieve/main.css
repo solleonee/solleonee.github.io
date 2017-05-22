@@ -1,14 +1,18 @@
 body {
     width: 1700px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
-    border:1px solid blue;
+    border: #e6e6e6;
+    border-width: 1px 1px 3px 1px;
+    border-style: solid solid double solid;
+
+}
+hr {
+    margin: 80px 0 20px 0;
 }
 
 /*!!!!!~~~~~~~~ HEADER ~~~~~~~~~~!!!!!!!*/
-header {
-    padding: 20px 0;
-    border:1px solid;
+.header_block {
     position: relative;
 }
 .company_logo {
@@ -56,7 +60,7 @@ header {
     padding: 0;
     display: none;
     position: absolute;
-    top: 40px;
+    top: 30px;
     left: -5px;
     border: solid #e0e0e0 1px;
     border-radius: 3px;
@@ -144,56 +148,57 @@ header {
 .cinematography {
     display: flex;
     padding: 63px 74px;
-    border: 1px solid grey;
 }
 .cinema__pic {
     position: relative;
     width: 500px;
     height: 300px;
-    background: url("../images/super-hero.jpg") no-repeat;
+    background: url("../images/super-hero.png") no-repeat;
     background-size: 100% 100%;
 }
 .cinema_pic__overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 6px;
+    left: 5px;
     display: flex;
     height: 50px;
-    position: absolute;
-    bottom: 12px;
-    left: 4px;
-    right: 6px;
 }
-.cinema_pic__overlay_item {
-    background: rgba(0,0,0,0.5);
+.overlay_box {
+    background: rgba(0,0,0,0.7);
     border-radius: 5px;
 }
-.left_arrow,
-.right_arrow {
+.overlay_arrow {
     flex: 1;
-    margin: 0 5px;
+    margin: 0 10px;
 }
-.middle_bar {
-    flex: 5;
+.overlay_main {
+    flex: 4;
+    padding: 5px;
 }
-.ads_content {
-    margin: 0;
-    padding: 8px;
-    font: 13px Arial, sans-serif;
-    color: white;
+.overlay__content_title {
+    font: 13px Arila, sans-serif;
+    color: #f6f6f6;
 }
-.ads_price {
+.overtlay__content_price {
     color: #ffc14c;
     font: 11px Arial, sans-serif;
 }
-.ads_location {
+.overtlay__content_location {
     color: #676767;
     font: 11px Arial, sans-serif;
 }
+
+
+
+
+
 .cinema_preview {
     width: 100%;
     padding: 0 20px;
     text-align: right;
     margin-left: 74px;
     font-family: Oxygen, sans-serif;
-    border: 1px solid red;
 }
 .cinema_preview__title {
     margin: 0;
@@ -223,8 +228,6 @@ header {
     width: 50px;
     border-radius: 5px;
     background: linear-gradient(to top, #efac3c, #efb74c);
-
-
 }
 .cinema_preview__trailer_butt a {
     margin: 10px;
@@ -243,19 +246,287 @@ header {
 }
 
 /*!!!!!!!!!!!!!!!!~~~~~~~~~~~~ SECTIONS_ARTICLES ~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!*/
+.articles {
+    font-family: Oxygen, sans-serif;
+}
+.articles_header {
+    font-size: 18px;
+}
 .articles_body {
     display: flex;
 }
 .articles_columns {
-    width: 33.3%;
+    width: 566px;
 }
+.middle_column {
+    margin: 0 20px;
+}
+.left_column .articles_pic_block {
+    background: #f0f0f0;
+}
+.middle_column .articles_pic_block {
+    background: #f4f4f4;
+}
+.right_column .articles_pic_block {
+    background: #f6f6f6;
+}
+
 .articles_pic_block {
-    padding: 2px 2px 30px 2px;
-    border:1px solid;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 0;
+
 }
 .articles__pic_container {
+    display: flex;
+    box-sizing: border-box;
     background: url("../images/articles_pic1.jpg") no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 200px;
+    height: 300px;
+    border: 2px solid transparent;
 }
+.articles__pic_description {
+    padding: 10px 10px 20px 10px;
+    background: url("../images/border-decor.png") repeat-x;
+    background-position: bottom left;
+    background-size: 20px;
+}
+.articles__pic_description__title {
+    margin:0;
+    padding:0;
+    font-size: 14px;
+    color: #666666;
+}
+.articles__pic_description__body {
+    margin-top: 10px;
+    padding:0;
+    font: 11px Arial, sans-serif;
+    color: #999999;
+}
+
+
+.articles__text_content {
+    color: #666666;
+    line-height: 1.5em;
+}
+
+/*!!!!!!!!!!!!!!~~~~~~~~~ SECTION_TABBS ~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!*/
+.tabbs_caption {
+    font: bold 18px Oxygen, sans-serif;
+}
+.highlighted {
+    background: #ffe7b9;
+    color: #c07e00;
+}
+.tabbs_body {
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    width: auto;
+    height: 350px;
+    position: relative;
+}
+.tabbs_menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tabbs_menu__item {
+    margin: 0;
+    padding: 0;
+    border: solid #e6e6e6;
+    border-width: 0 1px 0 0;
+}
+.gap_filler {
+    background: #f9f9f9;
+    border-width: 0 0 1px 0;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+.tabbs_menu__item input {
+    display: none;
+}
+.tabbs_menu__item label {
+    display: inline-block;
+    padding: 16px 12px;
+    color: #999999;
+    font: 14px Arial, sans-serif;
+    border-bottom: 1px solid #e6e6e6;
+    border-radius: 10px 0 0 0;
+    background: #f9f9f9;
+    white-space: nowrap;
+}
+.tabbs_menu__item label:hover {
+    cursor: pointer;
+}
+.tabbs_menu__item input:checked ~ label{
+    color: #666666;
+    border-bottom: 1px solid transparent;
+    background: white;
+}
+.tabbs_menu__item input:checked ~ .tabbs_menu__content_container {
+    visibility: visible;
+}
+
+
+.tabbs_menu__content_container {
+    visibility: hidden;
+    background: white;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 27px 20px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.tabbs_content__title {
+    font-size: 14px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 10px;
+
+}
+.tabbs_menu__content_box {
+    display: flex;
+    padding: 20px 0 40px 0;
+    font-size: 12px;
+    line-height: 1.9em;
+}
+.tabbs_content__list {
+    flex: 2;
+    text-transform: capitalize;
+}
+.tabbs_content__pic_box {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+}
+.tabbs_content__pic {
+    margin-right:15px;
+    width: 140px;
+    height: 120px;
+}
+.tabbs_content__pic_description {
+    color: #999999;
+}
+.tabbs_content__pic_description_title {
+    margin:0;
+    padding:0;
+    color: #333333;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.footer_lists {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.footer_lists_section {
+    flex: 1;
+}
+.footer_lists_section:nth-child(2) {
+    margin: 0 50px;
+}
+.footer_lists_section:last-child {
+    flex: 2;
+}
+.list__content {
+    list-style: none;
+    color: #ffad19;
+    font: bold 12px Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 0;
+}
+.list__content_item {
+    color: #666666;
+    font: normal 12px Arial, sans-serif;
+    text-transform: capitalize;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0;
+}
+.list__content_item:first-of-type {
+    margin-top: 15px;
+}
+.list__content_item:last-of-type {
+    border: none;
+}
+.style_image li {
+    position: relative;
+    text-indent: 25px;
+}
+.style_image li::before {
+    content: url("../images/galka.jpg");
+    position: absolute;
+    top: 12px;
+    left: -25px;
+}
+
+.list__content_article {
+    margin: 0;
+    padding: 0;
+    font: 11px Arial, sans-serif;
+    color: #aaaaaa;
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+.articles__pic_container:hover > .article_pic__overlay_buttons {
+    visibility: visible;
+    animation: article_pic__overlay-display 0.25s ease;
+
+}
+.article_pic__overlay_buttons {
+    visibility: hidden;
+    display: inline-flex;
+    margin: auto;
+}
+.overlay__buttons_item {
+
+    display: inline-block;
+    content: url(../images/galka.jpg);
+    margin: 0 15px;
+    width: 15px;
+    height: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 100%;
+    box-shadow: 0 0 1px 10px rgba(0,0,0,0.5);
+}
+.overlay__buttons_item:hover {
+    width: 60px;
+    height: 60px;
+    margin: -25px 20px;
+    padding: 25px;
+    transition:
+            width,height,padding, 0.3s ease-in;
+}
+.overlay__buttons_item:hover::after {
+    content: "";
+    box-shadow: 0 0 1px 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+@keyframes article_pic__overlay-display {
+    from {opacity: 0;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.5;}
+    75% {opacity: 0.75;}
+    to {opacity: 1;}
+}
+
+
+
+
