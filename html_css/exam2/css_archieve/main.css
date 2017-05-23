@@ -2,14 +2,10 @@ body {
     width: 1700px;
     margin: 40px auto;
     padding: 20px;
-    border: #e6e6e6;
-    border-width: 1px 1px 3px 1px;
-    border-style: solid solid double solid;
-
+    border: 1px solid #e6e6e6;
+    border-bottom: 3px double #e6e6e6;
 }
-hr {
-    margin: 80px 0 20px 0;
-}
+hr {margin: 80px 0 20px 0;}
 
 /*!!!!!~~~~~~~~ HEADER ~~~~~~~~~~!!!!!!!*/
 .header_block {
@@ -285,10 +281,34 @@ hr {
     height: 300px;
     border: 2px solid transparent;
 }
+.articles__pic_container:hover > .article_pic__overlay_buttons {
+    visibility: visible;
+    animation: article_pic__overlay-display 0.3s ease;
+}
+.article_pic__overlay_buttons {
+    visibility: hidden;
+    display: flex;
+    margin: auto;
+}
+.overlay__buttons_item {
+    display: block;
+    content: url(../images/galka.jpg);
+    margin: 0 25px;
+    padding: 15px;
+    background: white;
+    border-radius: 100%;
+    border-bottom: 1px solid grey;
+    box-shadow: 0 0 0 10px rgba(0,0,0,0.3);
+    transition: all 0.2s ease-in-out;
+}
+.overlay__buttons_item:hover {
+    transform: scale(2,2);
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.3);
+}
+
 .articles__pic_description {
     padding: 10px 10px 20px 10px;
-    background: url("../images/border-decor.png") repeat-x;
-    background-position: bottom left;
+    background: url("../images/border-decor.png") repeat-x bottom left;
     background-size: 20px;
 }
 .articles__pic_description__title {
@@ -480,40 +500,6 @@ hr {
 
 
 
-.articles__pic_container:hover > .article_pic__overlay_buttons {
-    visibility: visible;
-    animation: article_pic__overlay-display 0.25s ease;
-
-}
-.article_pic__overlay_buttons {
-    visibility: hidden;
-    display: inline-flex;
-    margin: auto;
-}
-.overlay__buttons_item {
-
-    display: inline-block;
-    content: url(../images/galka.jpg);
-    margin: 0 15px;
-    width: 15px;
-    height: 15px;
-    padding: 15px;
-    background: white;
-    border-radius: 100%;
-    box-shadow: 0 0 1px 10px rgba(0,0,0,0.5);
-}
-.overlay__buttons_item:hover {
-    width: 60px;
-    height: 60px;
-    margin: -25px 20px;
-    padding: 25px;
-    transition:
-            width,height,padding, 0.3s ease-in;
-}
-.overlay__buttons_item:hover::after {
-    content: "";
-    box-shadow: 0 0 1px 20px rgba(0,0,0,0.3);
-}
 
 
 
@@ -522,7 +508,10 @@ hr {
 @keyframes article_pic__overlay-display {
     from {opacity: 0;}
     25% {opacity: 0.25;}
-    50% {opacity: 0.5;}
+    35% {opacity: 0.35;}
+    45% {opacity: 0.45;}
+    55% {opacity: 0.55;}
+    65% {opacity: 0.65;}
     75% {opacity: 0.75;}
     to {opacity: 1;}
 }
