@@ -1,12 +1,42 @@
 body {
+    background: url(../images/body_background.png);
+}
+.site_body {
     width: 1700px;
     margin: 40px auto;
     padding: 20px;
     border: 1px solid #e6e6e6;
     border-bottom: double #e6e6e6;
     border-radius: 10px;
+    position: relative;
+    background: white;
 }
-hr {margin: 80px 0 20px 0;}
+.site_body:before, .site_body:after {
+    content: "";
+    position: absolute;
+    top: 80%;
+    bottom: 12px;
+    left: 25px;
+
+    width: 50%;
+    max-width:700px;
+
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 0 5px 30px rgba(0,0,0,.8);
+    transform: rotate(-2deg);
+    z-index: -1;
+}
+.site_body:after {
+    transform: rotate(2deg);
+    right: 25px;
+    left: auto;
+    z-index: -1;
+}
+hr {
+    margin: 80px 0 20px 0;
+    opacity: 0.5;
+}
 
 /*!!!!!~~~~~~~~ HEADER ~~~~~~~~~~!!!!!!!*/
 .header_block {
@@ -504,13 +534,13 @@ hr {margin: 80px 0 20px 0;}
 }
 .style_image li {
     position: relative;
-    text-indent: 25px;
+    text-indent: 45px;
 }
 .style_image li::before {
     content: url("../images/galka.jpg");
     position: absolute;
     top: 12px;
-    left: -25px;
+    left: -45px;
 }
 
 .list__content_article {
