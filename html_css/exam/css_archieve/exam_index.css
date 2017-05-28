@@ -2,7 +2,7 @@ body {
     background: url(../images/body_background.png);
 }
 .site_body {
-    width: 1700px;
+    width: 1200px;
     margin: 40px auto;
     padding: 20px;
     border: 1px solid #e6e6e6;
@@ -32,6 +32,11 @@ body {
     right: 25px;
     left: auto;
     z-index: -1;
+}
+footer {
+    width: 1200px !important;
+    margin: auto;
+
 }
 hr {
     margin: 40px 0;
